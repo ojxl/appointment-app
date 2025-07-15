@@ -1,39 +1,24 @@
 <?php
-// Start the session
-session_start();
+include '../templates/header.php'; 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-</head>
-<body>
+<div class="container">
+    <h2>Login</h2>
 
-    <div class="container">
-        <h2>Login</h2>
+    <!-- Display error message if passed via URL -->
+    <?php if (isset($_GET['error'])): ?>
+        <p style="color: red;"><?php echo htmlspecialchars($_GET['error']); ?></p>
+    <?php endif; ?>
 
-        <!-- Show error if it exists -->
-        <?php
-        if (isset($_GET['error'])) {
-            echo '<p style="color:red;">' . htmlspecialchars($_GET['error']) . '</p>';
-        }
-        ?>
+    <form action="login_process.php" method="POST">
+        <label for="username">Username or Email:</label><br>
+        <input type="text" name="username" id="username" required><br><br>
 
-        <form action="login_process.php" method="POST">
-            <label for="username">Username or Email:</label><br>
-            <input type="text" name="username" required><br><br>
+        <label for="password">Password:</label><br>
+        <input type="password" name="password" id="password" required><br><br>
 
-            <label for="password">Password:</label><br>
-            <input type="password" name="password" required><br><br>
+        <button type="submit">Login</button>
+    </form>
+</div>
 
-            <button type="submit">Login</button>
-        </form>
-
-    </div>
-
-</body>
-</html>
+<?php include '../templates/footer.php'; ?>
