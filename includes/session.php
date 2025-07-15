@@ -1,5 +1,4 @@
 <?php
-include '../templates/header.php'; 
 // Start session only if not already started
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
@@ -12,4 +11,3 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 ?>
-<?php include '../templates/footer.php'; ?>

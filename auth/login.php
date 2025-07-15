@@ -10,7 +10,7 @@ include '../templates/header.php';
         <p style="color: red;"><?php echo htmlspecialchars($_GET['error']); ?></p>
     <?php endif; ?>
 
-    <form action="login_process.php" method="POST">
+    <form action="login-process.php" method="POST">
         <label for="username">Username or Email:</label><br>
         <input type="text" name="username" id="username" required><br><br>
 
