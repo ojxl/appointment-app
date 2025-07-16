@@ -1,21 +1,21 @@
 <?php
-include "templates/header.php"; 
 require_once '../auth/check.php';
 require_once '../includes/db.php';
 require_once '../templates/header.php';
+
 $user_id = $_SESSION['user_id'];
 
-$sql = "SELECT id, appointment_date, appointment_time, notes FROM appointments WHERE user_id = ?";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("i", $user_id);
+$sql = "SELECT id, appointment_date, appointment_time, notes FROM appointments WHERE user_id = :user_id";
+$stmt = $pdo->prepare($sql);
+$stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
 $stmt->execute();
-$result = $stmt->get_result();
+$appointments = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <div class="container mt-5">
     <h2>Your Appointments</h2>
 
-    <?php if ($result->num_rows > 0): ?>
+    <?php if (count($appointments) > 0): ?>
         <table class="table table-bordered table-hover mt-3">
             <thead>
                 <tr>
@@ -26,7 +26,7 @@ $result = $stmt->get_result();
                 </tr>
             </thead>
             <tbody>
-                <?php while ($appointment = $result->fetch_assoc()): ?>
+                <?php foreach ($appointments as $appointment): ?>
                     <tr>
                         <td><?= htmlspecialchars($appointment['appointment_date']) ?></td>
                         <td><?= htmlspecialchars($appointment['appointment_time']) ?></td>
@@ -36,7 +36,7 @@ $result = $stmt->get_result();
                             <a href="delete.php?id=<?= $appointment['id'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?');">Delete</a>
                         </td>
                     </tr>
-                <?php endwhile; ?>
+                <?php endforeach; ?>
             </tbody>
         </table>
     <?php else: ?>

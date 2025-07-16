@@ -1,11 +1,12 @@
 <?php
 // Protect page: only logged-in users can see this
-require_once 'auth/session.php';
+require_once 'includes/session.php';
 
-// Include header
+
 require_once 'templates/header.php';
 ?>
 
+// Dashboard content will change later
 <div class="container mt-5">
     <h2>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h2>
 

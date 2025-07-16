@@ -9,7 +9,7 @@ include '../templates/header.php';
     <?php if (isset($_GET['error'])): ?>
         <p style="color: red;"><?php echo htmlspecialchars($_GET['error']); ?></p>
     <?php endif; ?>
-
+// Login form
     <form action="login-process.php" method="POST">
         <label for="username">Username or Email:</label><br>
         <input type="text" name="username" id="username" required><br><br>
