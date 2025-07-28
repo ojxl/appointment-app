@@ -102,14 +102,19 @@ require_once 'includes/cart_functions.php';
 									<figure class="product-style">
 										<img src="images/product-item1.jpg" alt="Books" class="product-item">
 										<a href="add_to_cart.php?title=The%20Kite%20Runner&author=Khaled%20Hosseini&price=40.00"></a>
-										<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-											Cart</button>
 									</figure>
 									<figcaption>
 										<h3>The Kite Runner</h3>
 										<span>Khaled Hosseini</span>
 										<div class="item-price">$ 40.00</div>
 									</figcaption>
+									<form action="add_to_cart.php" method="GET">
+  <input type="hidden" name="title" value="The Kite Runner">
+  <input type="hidden" name="author" value="Khaled Hosseini">
+  <input type="hidden" name="price" value="40.00">
+  <button type="submit">+ Add to Cart</button>
+</form>
+
 								</div>
 							</div>
 
@@ -117,14 +122,18 @@ require_once 'includes/cart_functions.php';
 								<div class="product-item">
 									<figure class="product-style">
 										<img src="images/product-item2.jpg" alt="Books" class="product-item">
-										<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-											Cart</button>
 									</figure>
 									<figcaption>
 										<h3>The Seven Husbands of Evelyn Hugo</h3>
 										<span>Taylor Jenkins Reid</span>
 										<div class="item-price">$ 30.00</div>
 									</figcaption>
+									<form action="add_to_cart.php" method="GET">
+  <input type="hidden" name="title" value="The Seven Husbands of Evelyn Hugo">
+  <input type="hidden" name="author" value="Taylor Jenkins Reid">
+  <input type="hidden" name="price" value="30.00">
+  <button type="submit">+ Add to Cart</button>
+</form>
 								</div>
 							</div>
 
@@ -132,14 +141,18 @@ require_once 'includes/cart_functions.php';
 								<div class="product-item">
 									<figure class="product-style">
 										<img src="images/product-item3.jpg" alt="Books" class="product-item">
-										<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-											Cart</button>
+										
 									</figure>
 									<figcaption>
-										<h3>The lady beauty Scarlett</h3>
-										<span>Arthur Doyle</span>
-										<div class="item-price">$ 40.00</div>
+										<h3>A Thousand Splendid Suns</h3>
+										<span>Khaled Hosseini</span>
+										<div class="item-price">$ 25.00</div>
 									</figcaption>
+									<form action="add_to_cart.php" method="GET">
+  <input type="hidden" name="title" value="A Thousand Splendid Suns">
+  <input type="hidden" name="author" value="Khaled Hosseini">
+  <input type="hidden" name="price" value="25.00">
+  <button type="submit">+ Add to Cart</button>
 								</div>
 							</div>
 
