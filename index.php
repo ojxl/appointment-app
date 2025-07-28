@@ -18,7 +18,7 @@
 					<div class="main-slider pattern-overlay">
 						<div class="slider-item">
 							<div class="banner-content">
-								<h2 class="banner-title">Life of the PI</h2>
+								<h2 class="banner-title">Life of PI</h2>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero
 									ipsum enim pharetra hac. Urna commodo, lacus ut magna velit eleifend. Amet, quis
 									urna, a eu.</p>
@@ -83,7 +83,7 @@
 						<div class="title">
 							<span>Some quality items</span>
 						</div>
-						<h2 class="section-title">Featured Books</h2>
+						<h2 class="section-title">This Weeks Selection</h2>
 					</div>
 
 					<div class="product-list" data-aos="fade-up">
@@ -97,8 +97,8 @@
 											Cart</button>
 									</figure>
 									<figcaption>
-										<h3>Simple way of piece life</h3>
-										<span>Armor Ramsey</span>
+										<h3>The Kite Runner</h3>
+										<span>Khaled Hosseini</span>
 										<div class="item-price">$ 40.00</div>
 									</figcaption>
 								</div>
@@ -112,9 +112,9 @@
 											Cart</button>
 									</figure>
 									<figcaption>
-										<h3>Great travel at desert</h3>
-										<span>Sanchit Howdy</span>
-										<div class="item-price">$ 38.00</div>
+										<h3>The Seven Husbands of Evelyn Hugo</h3>
+										<span>Taylor Jenkins Reid</span>
+										<div class="item-price">$ 30.00</div>
 									</figcaption>
 								</div>
 							</div>
@@ -129,7 +129,7 @@
 									<figcaption>
 										<h3>The lady beauty Scarlett</h3>
 										<span>Arthur Doyle</span>
-										<div class="item-price">$ 45.00</div>
+										<div class="item-price">$ 40.00</div>
 									</figcaption>
 								</div>
 							</div>
@@ -144,7 +144,7 @@
 									<figcaption>
 										<h3>Once upon a time</h3>
 										<span>Klien Marry</span>
-										<div class="item-price">$ 35.00</div>
+										<div class="item-price">$ 30.00</div>
 									</figcaption>
 								</div>
 							</div>
@@ -193,7 +193,7 @@
 									<h3 class="item-title">Birds gonna be happy</h3>
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet,
 										libero ipsum enim pharetra hac.</p>
-									<div class="item-price">$ 45.00</div>
+									<div class="item-price">$ 40.00</div>
 									<div class="btn-wrap">
 										<a href="#" class="btn-accent-arrow">shop it now <i
 												class="icon icon-ns-arrow-right"></i></a>
