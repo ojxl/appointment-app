@@ -3,7 +3,7 @@
 require_once '../includes/db.php';
 session_start();
 
-// Get form data
+// Get form data. The ?? '' makes sure that if the user leaves it blank, it still sets an empty string.
 $username = $_POST['username'] ?? '';
 $password = $_POST['password'] ?? '';
 
