@@ -35,7 +35,10 @@
                 <div class="col-md-6">
                     <div class="right-element">
                         <a href="#" class="user-account for-buy"><i class="icon icon-user"></i><span>Account</span></a>
-                        <a href="#" class="cart for-buy"><i class="icon icon-clipboard"></i><span>Cart:(0 $)</span></a>
+                      <a href="/appointment-app/public/cart.php" class="cart for-buy">
+    <i class="icon icon-clipboard"></i><span>Cart:(0 $)</span>
+</a>
+
                         <div class="action-menu">
                             <div class="search-bar">
                                 <a href="#" class="search-button search-toggle" data-selector="#header-wrap">
