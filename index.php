@@ -30,10 +30,12 @@ require_once 'includes/cart_functions.php';
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero
 									ipsum enim pharetra hac. Urna commodo, lacus ut magna velit eleifend. Amet, quis
 									urna, a eu.</p>
-								<div class="btn-wrap">
-									<a href="#" class="btn btn-outline-accent btn-accent-arrow">Read More<i
-											class="icon icon-ns-arrow-right"></i></a>
-								</div>
+								<form action="add_to_cart.php" method="GET">
+									<input type="hidden" name="title" value="Life of PI">
+									<input type="hidden" name="author" value="Yann Martel">
+									<input type="hidden" name="price" value="25.00">
+									<button type="submit">+ Add to Cart</button>
+								</form>
 							</div><!--banner-content-->
 							<img src="images/main-banner1.jpg" alt="banner" class="banner-image">
 						</div><!--slider-item-->
@@ -107,13 +109,13 @@ require_once 'includes/cart_functions.php';
 										<h3>The Kite Runner</h3>
 										<span>Khaled Hosseini</span>
 										<div class="item-price">$ 40.00</div>
+											<form action="add_to_cart.php" method="GET">
+												<input type="hidden" name="title" value="The Kite Runner">
+												<input type="hidden" name="author" value="Khaled Hosseini">
+												<input type="hidden" name="price" value="40.00">
+												<button type="submit">+ Add to Cart</button>
+											</form>
 									</figcaption>
-									<form action="add_to_cart.php" method="GET">
-  <input type="hidden" name="title" value="The Kite Runner">
-  <input type="hidden" name="author" value="Khaled Hosseini">
-  <input type="hidden" name="price" value="40.00">
-  <button type="submit">+ Add to Cart</button>
-</form>
 
 								</div>
 							</div>
@@ -127,13 +129,13 @@ require_once 'includes/cart_functions.php';
 										<h3>The Seven Husbands of Evelyn Hugo</h3>
 										<span>Taylor Jenkins Reid</span>
 										<div class="item-price">$ 30.00</div>
+											<form action="add_to_cart.php" method="GET">
+												<input type="hidden" name="title" value="The Seven Husbands of Evelyn Hugo">
+												<input type="hidden" name="author" value="Taylor Jenkins Reid">
+												<input type="hidden" name="price" value="30.00">
+												<button type="submit">+ Add to Cart</button>
+											</form>
 									</figcaption>
-									<form action="add_to_cart.php" method="GET">
-  <input type="hidden" name="title" value="The Seven Husbands of Evelyn Hugo">
-  <input type="hidden" name="author" value="Taylor Jenkins Reid">
-  <input type="hidden" name="price" value="30.00">
-  <button type="submit">+ Add to Cart</button>
-</form>
 								</div>
 							</div>
 
@@ -147,12 +149,13 @@ require_once 'includes/cart_functions.php';
 										<h3>A Thousand Splendid Suns</h3>
 										<span>Khaled Hosseini</span>
 										<div class="item-price">$ 25.00</div>
+											<form action="add_to_cart.php" method="GET">
+												<input type="hidden" name="title" value="A Thousand Splendid Suns">
+												<input type="hidden" name="author" value="Khaled Hosseini">
+												<input type="hidden" name="price" value="25.00">
+												<button type="submit">+ Add to Cart</button>
+											</form>
 									</figcaption>
-									<form action="add_to_cart.php" method="GET">
-  <input type="hidden" name="title" value="A Thousand Splendid Suns">
-  <input type="hidden" name="author" value="Khaled Hosseini">
-  <input type="hidden" name="price" value="25.00">
-  <button type="submit">+ Add to Cart</button>
 								</div>
 							</div>
 
@@ -164,9 +167,15 @@ require_once 'includes/cart_functions.php';
 											Cart</button>
 									</figure>
 									<figcaption>
-										<h3>Once upon a time</h3>
-										<span>Klien Marry</span>
+										<h3>To Kill A Mockingbird</h3>
+										<span>Gregory Peck</span>
 										<div class="item-price">$ 30.00</div>
+											<form action="add_to_cart.php" method="GET">
+												<input type="hidden" name="title" value="To Kill A Mockingbird">
+												<input type="hidden" name="author" value="Gregory Peck">
+												<input type="hidden" name="price" value="30.00">
+												<button type="submit">+ Add to Cart</button>
+											</form>
 									</figcaption>
 								</div>
 							</div>
@@ -176,17 +185,6 @@ require_once 'includes/cart_functions.php';
 
 
 				</div><!--inner-content-->
-			</div>
-
-			<div class="row">
-				<div class="col-md-12">
-
-					<div class="btn-wrap align-right">
-						<a href="#" class="btn-accent-arrow">View all products <i
-								class="icon icon-ns-arrow-right"></i></a>
-					</div>
-
-				</div>
 			</div>
 		</div>
 	</section>
@@ -211,15 +209,17 @@ require_once 'includes/cart_functions.php';
 								<h2 class="section-title divider">Best Selling Book</h2>
 
 								<div class="products-content">
-									<div class="author-name">By Timbur Hood</div>
-									<h3 class="item-title">Birds gonna be happy</h3>
+									<div class="author-name">By award winning author JK Rowling</div>
+									<h3 class="item-title">Harry Potter and the Sorcerers Stone</h3>
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet,
 										libero ipsum enim pharetra hac.</p>
-									<div class="item-price">$ 40.00</div>
-									<div class="btn-wrap">
-										<a href="#" class="btn-accent-arrow">shop it now <i
-												class="icon icon-ns-arrow-right"></i></a>
-									</div>
+									<div class="item-price">$ 25.00</div>
+										<form action="add_to_cart.php" method="GET">
+											<input type="hidden" name="title" value="Harry Potter and the Sorcerers Stone">
+											<input type="hidden" name="author" value="JK Rowling">
+											<input type="hidden" name="price" value="25.00">
+											<button type="submit">+ Add to Cart</button>
+										</form>
 								</div>
 
 							</div>
@@ -250,9 +250,6 @@ require_once 'includes/cart_functions.php';
 						<li data-tab-target="#all-genre" class="active tab">All Genre</li>
 						<li data-tab-target="#business" class="tab">Business</li>
 						<li data-tab-target="#technology" class="tab">Technology</li>
-						<li data-tab-target="#romantic" class="tab">Romantic</li>
-						<li data-tab-target="#adventure" class="tab">Adventure</li>
-						<li data-tab-target="#fictional" class="tab">Fictional</li>
 					</ul>
 
 					<div class="tab-content">
@@ -263,13 +260,17 @@ require_once 'includes/cart_functions.php';
 									<div class="product-item">
 										<figure class="product-style">
 											<img src="images/tab-item1.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-												Cart</button>
 										</figure>
 										<figcaption>
-											<h3>Portrait photography</h3>
-											<span>Adam Silber</span>
-											<div class="item-price">$ 40.00</div>
+											<h3>The Innovators</h3>
+											<span>Walter Isaacson</span>
+											<div class="item-price">$ 18.00</div>
+											<form action="add_to_cart.php" method="GET">
+												<input type="hidden" name="title" value="The Innovators">
+												<input type="hidden" name="author" value="Walter Isaacson">
+												<input type="hidden" name="price" value="18.00">
+												<button type="submit">+ Add to Cart</button>
+											</form>
 										</figcaption>
 									</div>
 								</div>
@@ -278,13 +279,18 @@ require_once 'includes/cart_functions.php';
 									<div class="product-item">
 										<figure class="product-style">
 											<img src="images/tab-item2.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-												Cart</button>
+											
 										</figure>
 										<figcaption>
-											<h3>Once upon a time</h3>
-											<span>Klien Marry</span>
-											<div class="item-price">$ 35.00</div>
+											<h3>Rich Dad Poor Dad</h3>
+											<span>Robert Kiyosaki</span>
+											<div class="item-price">$ 10.00</div>
+												<form action="add_to_cart.php" method="GET">
+													<input type="hidden" name="title" value="Rich Dad Poor Dad">
+													<input type="hidden" name="author" value="Robert Kiyosaki">
+													<input type="hidden" name="price" value="10.00">
+													<button type="submit">+ Add to Cart</button>
+ 												 </form>
 										</figcaption>
 									</div>
 								</div>
@@ -293,13 +299,18 @@ require_once 'includes/cart_functions.php';
 									<div class="product-item">
 										<figure class="product-style">
 											<img src="images/tab-item3.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-												Cart</button>
+											
 										</figure>
 										<figcaption>
-											<h3>Tips of simple lifestyle</h3>
-											<span>Bratt Smith</span>
-											<div class="item-price">$ 40.00</div>
+											<h3>Hooked: How to Build Habit-Forming Products</h3>
+											<span>Nir Eyal</span>
+											<div class="item-price">$ 12.00</div>
+												<form action="add_to_cart.php" method="GET">
+												<input type="hidden" name="title" value="Hooked: How to Build Habit-Forming Products">
+												<input type="hidden" name="author" value="Nir Eyal">
+												<input type="hidden" name="price" value="12.00">
+												<button type="submit">+ Add to Cart</button>
+											</form>
 										</figcaption>
 									</div>
 								</div>
@@ -308,13 +319,18 @@ require_once 'includes/cart_functions.php';
 									<div class="product-item">
 										<figure class="product-style">
 											<img src="images/tab-item4.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-												Cart</button>
+											
 										</figure>
 										<figcaption>
-											<h3>Just felt from outside</h3>
-											<span>Nicole Wilson</span>
-											<div class="item-price">$ 40.00</div>
+											<h3>Think and Grow Rich</h3>
+											<span>Napolean Hill</span>
+											<div class="item-price">$ 8.00</div>
+												<form action="add_to_cart.php" method="GET">
+													<input type="hidden" name="title" value="Think and Grow Rich">
+													<input type="hidden" name="author" value="Napolean Hill">
+													<input type="hidden" name="price" value="8.00">
+													<button type="submit">+ Add to Cart</button>
+												</form>
 										</figcaption>
 									</div>
 								</div>
@@ -326,13 +342,18 @@ require_once 'includes/cart_functions.php';
 									<div class="product-item">
 										<figure class="product-style">
 											<img src="images/tab-item5.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-												Cart</button>
+											
 										</figure>
 										<figcaption>
-											<h3>Peaceful Enlightment</h3>
-											<span>Marmik Lama</span>
-											<div class="item-price">$ 40.00</div>
+											<h3>AI Superpowers</h3>
+											<span>Kai-Fu Lee</span>
+											<div class="item-price">$ 14.00</div>
+											<form action="add_to_cart.php" method="GET">
+													<input type="hidden" name="title" value="AI Superpowers">
+													<input type="hidden" name="author" value="Kai-Fu Lee">
+													<input type="hidden" name="price" value="14.00">
+													<button type="submit">+ Add to Cart</button>
+												</form>
 										</figcaption>
 									</div>
 								</div>
@@ -341,13 +362,18 @@ require_once 'includes/cart_functions.php';
 									<div class="product-item">
 										<figure class="product-style">
 											<img src="images/tab-item6.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-												Cart</button>
+											
 										</figure>
 										<figcaption>
-											<h3>Great travel at desert</h3>
-											<span>Sanchit Howdy</span>
-											<div class="item-price">$ 40.00</div>
+											<h3>Good to great</h3>
+											<span>Jim Collins</span>
+											<div class="item-price">$ 16.00</div>
+											<form action="add_to_cart.php" method="GET">
+													<input type="hidden" name="title" value="Good to great">
+													<input type="hidden" name="author" value="Jim Collins">
+													<input type="hidden" name="price" value="16.00">
+													<button type="submit">+ Add to Cart</button>
+												</form>
 										</figcaption>
 									</div>
 								</div>
@@ -356,13 +382,18 @@ require_once 'includes/cart_functions.php';
 									<div class="product-item">
 										<figure class="product-style">
 											<img src="images/tab-item7.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-												Cart</button>
+											
 										</figure>
 										<figcaption>
-											<h3>Life among the pirates</h3>
-											<span>Armor Ramsey</span>
-											<div class="item-price">$ 40.00</div>
+											<h3>The Notebook</h3>
+											<span>Nicholas Sparks</span>
+											<div class="item-price">$ 10.00</div>
+											<form action="add_to_cart.php" method="GET">
+													<input type="hidden" name="title" value="The Notebook">
+													<input type="hidden" name="author" value="Nicholas Sparks">
+													<input type="hidden" name="price" value="10.00">
+													<button type="submit">+ Add to Cart</button>
+												</form>
 										</figcaption>
 									</div>
 								</div>
@@ -371,13 +402,18 @@ require_once 'includes/cart_functions.php';
 									<div class="product-item">
 										<figure class="product-style">
 											<img src="images/tab-item8.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-												Cart</button>
+											
 										</figure>
 										<figcaption>
-											<h3>Simple way of piece life</h3>
-											<span>Armor Ramsey</span>
-											<div class="item-price">$ 40.00</div>
+											<h3>The Great Gatsby</h3>
+											<span>F. Scott Fitzgerald </span>
+											<div class="item-price">$ 15.00</div>
+											<form action="add_to_cart.php" method="GET">
+													<input type="hidden" name="title" value="The Great Gatsby">
+													<input type="hidden" name="author" value="F. Scott Fitzgerald">
+													<input type="hidden" name="price" value="15.00">
+													<button type="submit">+ Add to Cart</button>
+												</form>
 										</figcaption>
 									</div>
 								</div>
@@ -391,13 +427,18 @@ require_once 'includes/cart_functions.php';
 									<div class="product-item">
 										<figure class="product-style">
 											<img src="images/tab-item2.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-												Cart</button>
+											
 										</figure>
 										<figcaption>
-											<h3>Peaceful Enlightment</h3>
-											<span>Marmik Lama</span>
-											<div class="item-price">$ 40.00</div>
+											<h3>Rich Dad Poor Dad</h3>
+											<span>Robert Kiyosaki</span>
+											<div class="item-price">$ 10.00</div>
+												<form action="add_to_cart.php" method="GET">
+													<input type="hidden" name="title" value="Rich Dad Poor Dad">
+													<input type="hidden" name="author" value="Robert Kiyosaki">
+													<input type="hidden" name="price" value="10.00">
+													<button type="submit">+ Add to Cart</button>
+ 												 </form>
 										</figcaption>
 									</div>
 								</div>
@@ -406,13 +447,18 @@ require_once 'includes/cart_functions.php';
 									<div class="product-item">
 										<figure class="product-style">
 											<img src="images/tab-item4.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-												Cart</button>
+											
 										</figure>
 										<figcaption>
-											<h3>Great travel at desert</h3>
-											<span>Sanchit Howdy</span>
-											<div class="item-price">$ 40.00</div>
+											<h3>Think and Grow Rich</h3>
+											<span>Napolean Hill</span>
+											<div class="item-price">$ 8.00</div>
+												<form action="add_to_cart.php" method="GET">
+													<input type="hidden" name="title" value="Think and Grow Rich">
+													<input type="hidden" name="author" value="Napolean Hill">
+													<input type="hidden" name="price" value="8.00">
+													<button type="submit">+ Add to Cart</button>
+												</form>
 										</figcaption>
 									</div>
 								</div>
@@ -421,13 +467,18 @@ require_once 'includes/cart_functions.php';
 									<div class="product-item">
 										<figure class="product-style">
 											<img src="images/tab-item6.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-												Cart</button>
+											
 										</figure>
 										<figcaption>
-											<h3>Life among the pirates</h3>
-											<span>Armor Ramsey</span>
-											<div class="item-price">$ 40.00</div>
+											<h3>Good to great</h3>
+											<span>Jim Collins</span>
+											<div class="item-price">$ 16.00</div>
+											<form action="add_to_cart.php" method="GET">
+													<input type="hidden" name="title" value="Good to great">
+													<input type="hidden" name="author" value="Jim Collins">
+													<input type="hidden" name="price" value="16.00">
+													<button type="submit">+ Add to Cart</button>
+												</form>
 										</figcaption>
 									</div>
 								</div>
@@ -456,190 +507,17 @@ require_once 'includes/cart_functions.php';
 									<div class="product-item">
 										<figure class="product-style">
 											<img src="images/tab-item1.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-												Cart</button>
 										</figure>
 										<figcaption>
-											<h3>Peaceful Enlightment</h3>
-											<span>Marmik Lama</span>
-											<div class="item-price">$ 40.00</div>
-										</figcaption>
-									</div>
-								</div>
-
-								<div class="col-md-3">
-									<div class="product-item">
-										<figure class="product-style">
-											<img src="images/tab-item3.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-												Cart</button>
-										</figure>
-										<figcaption>
-											<h3>Great travel at desert</h3>
-											<span>Sanchit Howdy</span>
-											<div class="item-price">$ 40.00</div>
-										</figcaption>
-									</div>
-								</div>
-
-								<div class="col-md-3">
-									<div class="product-item">
-										<figure class="product-style">
-											<img src="images/tab-item5.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-												Cart</button>
-										</figure>
-										<figcaption>
-											<h3>Life among the pirates</h3>
-											<span>Armor Ramsey</span>
-											<div class="item-price">$ 40.00</div>
-										</figcaption>
-									</div>
-								</div>
-
-								<div class="col-md-3">
-									<div class="product-item">
-										<figure class="product-style">
-											<img src="images/tab-item7.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-												Cart</button>
-										</figure>
-										<figcaption>
-											<h3>Simple way of piece life</h3>
-											<span>Armor Ramsey</span>
-											<div class="item-price">$ 40.00</div>
-										</figcaption>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div id="romantic" data-tab-content>
-							<div class="row">
-								<div class="col-md-3">
-									<div class="product-item">
-										<figure class="product-style">
-											<img src="images/tab-item1.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-												Cart</button>
-										</figure>
-										<figcaption>
-											<h3>Peaceful Enlightment</h3>
-											<span>Marmik Lama</span>
-											<div class="item-price">$ 40.00</div>
-										</figcaption>
-									</div>
-								</div>
-
-								<div class="col-md-3">
-									<div class="product-item">
-										<figure class="product-style">
-											<img src="images/tab-item3.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-												Cart</button>
-										</figure>
-										<figcaption>
-											<h3>Great travel at desert</h3>
-											<span>Sanchit Howdy</span>
-											<div class="item-price">$ 40.00</div>
-										</figcaption>
-									</div>
-								</div>
-
-								<div class="col-md-3">
-									<div class="product-item">
-										<figure class="product-style">
-											<img src="images/tab-item5.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-												Cart</button>
-										</figure>
-										<figcaption>
-											<h3>Life among the pirates</h3>
-											<span>Armor Ramsey</span>
-											<div class="item-price">$ 40.00</div>
-										</figcaption>
-									</div>
-								</div>
-
-								<div class="col-md-3">
-									<div class="product-item">
-										<figure class="product-style">
-											<img src="images/tab-item7.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-												Cart</button>
-										</figure>
-										<figcaption>
-											<h3>Simple way of piece life</h3>
-											<span>Armor Ramsey</span>
-											<div class="item-price">$ 40.00</div>
-										</figcaption>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div id="adventure" data-tab-content>
-							<div class="row">
-								<div class="col-md-3">
-									<div class="product-item">
-										<figure class="product-style">
-											<img src="images/tab-item5.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-												Cart</button>
-										</figure>
-										<figcaption>
-											<h3>Life among the pirates</h3>
-											<span>Armor Ramsey</span>
-											<div class="item-price">$ 40.00</div>
-										</figcaption>
-									</div>
-								</div>
-
-								<div class="col-md-3">
-									<div class="product-item">
-										<figure class="product-style">
-											<img src="images/tab-item7.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-												Cart</button>
-										</figure>
-										<figcaption>
-											<h3>Simple way of piece life</h3>
-											<span>Armor Ramsey</span>
-											<div class="item-price">$ 40.00</div>
-										</figcaption>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div id="fictional" data-tab-content>
-							<div class="row">
-								<div class="col-md-3">
-									<div class="product-item">
-										<figure class="product-style">
-											<img src="images/tab-item5.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-												Cart</button>
-										</figure>
-										<figcaption>
-											<h3>Life among the pirates</h3>
-											<span>Armor Ramsey</span>
-											<div class="item-price">$ 40.00</div>
-										</figcaption>
-									</div>
-								</div>
-
-								<div class="col-md-3">
-									<div class="product-item">
-										<figure class="product-style">
-											<img src="images/tab-item7.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-												Cart</button>
-										</figure>
-										<figcaption>
-											<h3>Simple way of piece life</h3>
-											<span>Armor Ramsey</span>
-											<div class="item-price">$ 40.00</div>
+											<h3>The Innovators</h3>
+											<span>Walter Isaacson</span>
+											<div class="item-price">$ 18.00</div>
+											<form action="add_to_cart.php" method="GET">
+												<input type="hidden" name="title" value="The Innovators">
+												<input type="hidden" name="author" value="Walter Isaacson">
+												<input type="hidden" name="price" value="18.00">
+												<button type="submit">+ Add to Cart</button>
+											</form>
 										</figcaption>
 									</div>
 								</div>
@@ -658,9 +536,8 @@ require_once 'includes/cart_functions.php';
 		<div class="inner-content">
 			<h2 class="section-title divider">Quote of the day</h2>
 			<blockquote data-aos="fade-up">
-				<q>“The more that you read, the more things you will know. The more that you learn, the more places
-					you’ll go.”</q>
-				<div class="author-name">Dr. Seuss</div>
+				<q>“All men dream, but not equally. Those who dream by night in the dusty recesses of their minds wake in the day to find it was vanity; but the dreamers of the day are dangerous men, for they may act on their dreams with open eyes, to make them possible.”</q>
+				<div class="author-name">T.E. Lawrence</div>
 			</blockquote>
 		</div>
 	</section>
@@ -682,68 +559,73 @@ require_once 'includes/cart_functions.php';
 							<div class="product-item">
 								<figure class="product-style">
 									<img src="images/product-item5.jpg" alt="Books" class="product-item">
-									<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-										Cart</button>
 								</figure>
 								<figcaption>
-									<h3>Simple way of piece life</h3>
-									<span>Armor Ramsey</span>
+									<h3>The Alchemist</h3>
+									<span>Paul Coelho</span>
 									<div class="item-price">
-										<span class="prev-price">$ 50.00</span>$ 40.00
+										<span class="prev-price">$ 40.00</span>$ 30.00
 									</div>
 								</div>
+								
 							</figcaption>
 
 							<div class="product-item">
 								<figure class="product-style">
 									<img src="images/product-item6.jpg" alt="Books" class="product-item">
-									<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-										Cart</button>
 								</figure>
 								<figcaption>
-									<h3>Great travel at desert</h3>
-									<span>Sanchit Howdy</span>
+									<h3>Atomic Habits</h3>
+									<span>James Clear</span>
 									<div class="item-price">
-										<span class="prev-price">$ 30.00</span>$ 38.00
+										<span class="prev-price">$ 35.00</span>$ 25.00
 									</div>
 								</div>
+							
 							</figcaption>
 
 							<div class="product-item">
 								<figure class="product-style">
 									<img src="images/product-item7.jpg" alt="Books" class="product-item">
-									<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-										Cart</button>
 								</figure>
 								<figcaption>
-									<h3>The lady beauty Scarlett</h3>
-									<span>Arthur Doyle</span>
+									<h3>Where the crawdads sing</h3>
+									<span>Delia Owens</span>
 									<div class="item-price">
-										<span class="prev-price">$ 35.00</span>$ 45.00
+										<span class="prev-price">$ 30.00</span>$ 20.00
 									</div>
 								</div>
+								<form action="add_to_cart.php" method="GET">
+												<input type="hidden" name="title" value="Where the crawdads sing">
+												<input type="hidden" name="author" value="Delia Owens">
+												<input type="hidden" name="price" value="20.00">
+												<button type="submit">+ Add to Cart</button>
+											</form>
 							</figcaption>
 
 							<div class="product-item">
 								<figure class="product-style">
 									<img src="images/product-item8.jpg" alt="Books" class="product-item">
-									<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-										Cart</button>
 								</figure>
 								<figcaption>
-									<h3>Once upon a time</h3>
-									<span>Klien Marry</span>
+									<h3>The Midnight Library</h3>
+									<span>Matt Haig</span>
 									<div class="item-price">
-										<span class="prev-price">$ 25.00</span>$ 35.00
+										<span class="prev-price">$ 25.00</span>$ 15.00
 									</div>
 								</div>
+								<form action="add_to_cart.php" method="GET">
+												<input type="hidden" name="title" value="The Midnight Library">
+												<input type="hidden" name="author" value="Matt Haig">
+												<input type="hidden" name="price" value="15.00">
+												<button type="submit">+ Add to Cart</button>
+											</form>
 							</figcaption>
 
 							<div class="product-item">
 								<figure class="product-style">
 									<img src="images/product-item2.jpg" alt="Books" class="product-item">
-									<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
-										Cart</button>
+									
 								</figure>
 								<figcaption>
 									<h3>Simple way of piece life</h3>

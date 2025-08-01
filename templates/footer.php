@@ -6,7 +6,7 @@
 				<div class="footer-item">
 					<div class="company-brand">
 						<img src="/appointment-app/public/images/main-logo.png" alt="logo" class="footer-logo">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis sed ptibus libero lectus non et psryroin.</p>
+						<p>We do books different...</p>
 					</div>
 				</div>
 			</div>

@@ -607,6 +607,13 @@ body.chocolat-open > .chocolat-image-wrapper {
 .chocolat-zoomable.chocolat-zooming-out .chocolat-img {
     transition: margin .2s ease;
 }
+.product-style img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
 
 /* uncomment to hide controls when zoomed-in*/
 /*
