@@ -1,28 +1,57 @@
 <?php
 require_once 'includes/session.php';
-
 require_once 'includes/cart_functions.php';
 
-$cart = getCart();
+$cartItems = getCart();
+$total = 0;
 ?>
-<?php include "templates/header.php"; ?>
 
-<h2>Your Cart</h2>
-<?php if (empty($cart)): ?>
-    <p>Your cart is empty.</p>
-<?php else: ?>
-    <ul>
-        <?php foreach ($cart as $item): ?>
-            <li>
-                <img src="<?= htmlspecialchars($item['image']) ?>" alt="Book" width="50">
-                <?= htmlspecialchars($item['title']) ?> - $<?= htmlspecialchars($item['price']) ?>
-            </li>
-        <?php endforeach; ?>
-    </ul>
-    <form method="POST" action="appointments/book.php">
-        <label>Pick up Date & Time:</label><br>
-        <input type="datetime-local" name="datetime" required>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="css/style.css"> <!-- link to your existing style -->
+</head>
+<body>
+  <?php include 'templates/header.php'; ?>
+
+  <div class="container">
+    <h2>Your Cart</h2>
+
+    <?php if (count($cartItems) > 0): ?>
+      <table>
+        <thead>
+          <tr>
+            <th>Book</th>
+            <th>Author</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php foreach ($cartItems as $item): ?>
+            <tr>
+              <td><?= htmlspecialchars($item['title']) ?></td>
+              <td><?= htmlspecialchars($item['author']) ?></td>
+              <td>$<?= number_format($item['price'], 2) ?></td>
+            </tr>
+            <?php $total += $item['price']; ?>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
+
+      <p><strong>Subtotal:</strong> $<?= number_format($total, 2) ?></p>
+
+      <!-- Book appointment button -->
+      <form action="appointments/book.php" method="POST">
         <button type="submit">Book Appointment</button>
-    </form>
-<?php endif; ?>
-<?php include "templates/footer.php"; ?>
+      </form>
+
+    <?php else: ?>
+      <p>Your cart is empty.</p>
+    <?php endif; ?>
+  </div>
+
+  <?php include 'templates/footer.php'; ?>
+</body>
+</html>

@@ -9,7 +9,7 @@ require_once 'includes/cart_functions.php';
 <html lang="en">
 <?php include "templates/header.php"; ?>
 
-
+<H4>							Here at BooksAgain we do our shopping different! instead od buying online, you can just add the desired books to your cart, book an appointment and go pick them up at your closest in store location!</H4>
 
 	</div><!--header-wrap-->
 
