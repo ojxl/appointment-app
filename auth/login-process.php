@@ -1,48 +1,48 @@
 <?php
 
+// Start session and connect to the database using PDO (covered in SymfonyCasts Ep.3 and WebDev Part 1 PDF)
 require_once '../includes/db.php';
 session_start();
 
-// Get form data. The ?? '' makes sure that if the user leaves it blank, it still sets an empty string.
+// Get the username and password from the form (Part 2 PDF shows how to access form data with $_POST)
 $username = $_POST['username'] ?? '';
 $password = $_POST['password'] ?? '';
 
-// Validation to make sure something is put in 
+// Check if either field is empty (this is basic validation from the Forms & Validation slides)
 if (empty($username) || empty($password)) {
     header("Location: login.php?error=Please fill in all fields");
     exit();
 }
 
-// Using prepared statement with PDO. i think i need to fix the username and email check i think thats whats bugging.
+// Use a prepared statement to protect against SQL injection (covered in SymfonyCasts and WebDev Part 1)
 $sql = "SELECT * FROM users WHERE username = :username OR email = :email";
-// Prepare the statement
 $stmt = $pdo->prepare($sql);
-// Bind parameters to prevent SQL injection
+
+// Bind the same value to both :username and :email so users can log in using either
 $stmt->bindValue(':username', $username, PDO::PARAM_STR);
-// Bind email as well to check both username and email
 $stmt->bindValue(':email', $username, PDO::PARAM_STR);
-// Execute the statement
 $stmt->execute();
 
-// Fetch the user data
+// Fetch the user record from the database
 $user = $stmt->fetch();
 
-// Check if user exists and verify password and take ti dashboard if correct
+// If a user is found, check the password using password_verify (also taught in SymfonyCasts Ep.3)
 if ($user) {
-    // Verify the password
     if (password_verify($password, $user['password'])) {
+        // If the password is correct, log them in and set session data (from Login with Sessions labsheet 2023)
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['username'] = $user['username'];
+
+        // Redirect to dashboard on successful login
         header("Location: ../dashboard.php");
         exit();
-        // Redirect to the dashboard if login is successful
     } else {
-        // Invalid password
+        // If the password doesn't match, show error
         header("Location: login.php?error=Invalid password");
         exit();
     }
-    // User found, set session variables
 } else {
+    // If no user found with that username/email, show error
     header("Location: login.php?error=User not found");
     exit();
 }
