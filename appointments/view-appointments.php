@@ -1,4 +1,5 @@
 <?php
+
 // This file ensures the user is logged in before accessing this page
 require_once '../auth/check.php'; // Auth check is covered in the "Login with Sessions labsheet 2023" and "L6 Cookies Sessions.pptx"
 
@@ -20,7 +21,9 @@ $stmt->execute();
 
 // Fetch all matching appointment records as an associative array
 $appointments = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
+
 
 <div class="container mt-5">
     <h2>Your Appointments</h2>
