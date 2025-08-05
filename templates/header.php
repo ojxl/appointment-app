@@ -1,3 +1,9 @@
+<?php
+// Make sure the session is started before checking login state
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,9 +39,9 @@
                 </div>
                 <div class="col-md-6">
                     <div class="right-element">
-                      <a href="/appointment-app/public/cart.php" class="cart for-buy">
-    <i class="icon icon-clipboard"></i><span>Cart</span>
-</a>
+                        <a href="/appointment-app/public/cart.php" class="cart for-buy">
+                            <i class="icon icon-clipboard"></i><span>Cart</span>
+                        </a>
 
                         <div class="action-menu">
                             <div class="search-bar">
@@ -69,10 +75,12 @@
                             <ul class="menu-list">
                                 <li class="menu-item"><a href="/appointment-app/public/index.php">Home</a></li>
                                 <li class="menu-item"><a href="/appointment-app/public/appointments/view-appointments.php">My Appointments</a></li>
+                                
                                 <?php if (isset($_SESSION['user_id'])): ?>
                                     <li class="menu-item"><a href="/appointment-app/public/auth/logout.php">Logout</a></li>
                                 <?php else: ?>
                                     <li class="menu-item"><a href="/appointment-app/public/auth/login.php">Login</a></li>
+                                    <li class="menu-item"><a href="/appointment-app/public/auth/register.php">Register</a></li>
                                 <?php endif; ?>
                             </ul>
                             <div class="hamburger">

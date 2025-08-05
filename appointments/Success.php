@@ -31,10 +31,11 @@ $appointment = $_SESSION['appointment'] ?? null;
       <p><strong>Books:</strong></p>
       <ul>
         <!-- Loop through each booked item from the session cart -->
-        <?php foreach ($appointment['books'] as $book): ?>
+        <?php foreach ($appointment['books'] as $book): ?><!--Forms and form validation.pptx -->
           <!-- Show each book's title and author securely using htmlspecialchars (learned from SymfonyCasts Ep. 3) -->
           <li><?= htmlspecialchars($book['title']) ?> by <?= htmlspecialchars($book['author']) ?></li>
         <?php endforeach; ?>
+        <h2>If you wish to edit or delete your appointment, click on My Appointments</h2>
       </ul>
     <?php else: ?>
       <!-- Fallback in case user somehow arrives here without booking -->

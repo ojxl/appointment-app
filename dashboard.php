@@ -10,8 +10,7 @@ require_once 'templates/header.php';
 <!-- Dashboard layout content starts here -->
 <div class="container mt-5">
     <!-- Greet the logged-in user using their session username (Ref: SymfonyCasts Ep3 - using session data) -->
-    <h2>Welcome, Click home to get back to browsing! <?php echo htmlspecialchars($_SESSION['username']); ?>!</h2>
-    
+    <h2>Welcome, Click home to get back to browsing <?php echo htmlspecialchars($_SESSION['username']); ?>!</h2>
 
     <!-- Button to logout -->
     <!-- Buttons styled using Bootstrap (ref: template + Bootstrap 5.3.1 from HTML header) -->

@@ -241,7 +241,7 @@ require_once 'includes/cart_functions.php';
 
 					<div class="section-header align-center">
 						<div class="title">
-							<span>Some quality items</span>
+							<span>This Weeks Availability</span>
 						</div>
 						<h2 class="section-title">Popular Books</h2>
 					</div>
