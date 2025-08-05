@@ -53,7 +53,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ]);
 
         // Redirect after update with a success message
-        header("Location: view_appointments.php?message=Appointment+updated+successfully");
+        header("Location: view-appointments.php?message=Appointment+updated+successfully");
+
         exit();
     } else {
         // Validation error
