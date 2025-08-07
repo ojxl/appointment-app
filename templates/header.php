@@ -81,6 +81,7 @@ if (session_status() === PHP_SESSION_NONE) {
                                 <?php else: ?>
                                     <li class="menu-item"><a href="/appointment-app/public/auth/login.php">Login</a></li>
                                     <li class="menu-item"><a href="/appointment-app/public/auth/register.php">Register</a></li>
+                                     <li class="menu-item"><a href="/appointment-app/public/about.php">About Us</a></li>
                                 <?php endif; ?>
                             </ul>
                             <div class="hamburger">

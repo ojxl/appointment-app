@@ -15,11 +15,7 @@
 				<div class="footer-menu">
 					<h5>About Us</h5>
 					<ul class="menu-list">
-						<li><a href="#">Vision</a></li>
-						<li><a href="#">Articles</a></li>
-						<li><a href="#">Careers</a></li>
-						<li><a href="#">Service Terms</a></li>
-						<li><a href="#">Donate</a></li>
+							<li><a href="/appointment-app/public/about.php">About Us</a></li>
 					</ul>
 				</div>
 			</div>
@@ -28,11 +24,8 @@
 				<div class="footer-menu">
 					<h5>Discover</h5>
 					<ul class="menu-list">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Books</a></li>
-						<li><a href="#">Authors</a></li>
-						<li><a href="#">Subjects</a></li>
-						<li><a href="#">Advanced Search</a></li>
+						<li><a href="/appointment-app/public/index.php">Home</a></li>
+						
 					</ul>
 				</div>
 			</div>
@@ -41,26 +34,14 @@
 				<div class="footer-menu">
 					<h5>My Account</h5>
 					<ul class="menu-list">
-						<li><a href="#">Sign In</a></li>
-						<li><a href="#">Sign up</a></li>
-						<li><a href="#">View Cart</a></li>
-						<li><a href="#">Wishlist</a></li>
-						<li><a href="#">Track Order</a></li>
+						<li><a href="/appointment-app/public/auth/login.php">Sign In</a></li>
+						<li><a href="/appointment-app/public/auth/register.php">Sign up</a></li>
+						<li><a href="/appointment-app/public/cart.php">View Cart</a></li>
 					</ul>
 				</div>
 			</div>
 
-			<div class="col-md-2">
-				<div class="footer-menu">
-					<h5>Help</h5>
-					<ul class="menu-list">
-						<li><a href="#">Help Center</a></li>
-						<li><a href="#">Report a Problem</a></li>
-						<li><a href="#">Suggest Edits</a></li>
-						<li><a href="#">Contact Us</a></li>
-					</ul>
-				</div>
-			</div>
+		
 
 		</div>
 	</div>
