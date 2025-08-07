@@ -4,7 +4,6 @@
 
 require_once '../auth/check.php'; // Protects the page – only logged-in users can access (from "Login with Sessions labsheet 2023")
 require_once '../includes/db.php'; // Connect to database (PDO setup as required in brief)
-require_once '../templates/header.php'; // Load the page header
 
 // Get appointment ID from the URL (query parameter)
 $appointment_id = $_GET['id'] ?? null;
@@ -25,6 +24,7 @@ $appointment = $stmt->fetch();
 
 // Check if this appointment belongs to the logged-in user
 if (!$appointment) {
+    require_once '../templates/header.php'; // Load the page header
     echo "<p>Appointment not found or you do not have permission to edit it.</p>";
     include '../templates/footer.php';
     exit();
@@ -54,18 +54,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Redirect after update with a success message
         header("Location: view-appointments.php?message=Appointment+updated+successfully");
-
         exit();
     } else {
         // Validation error
-        echo "<p style='color:red;'>Please fill in both date and time.</p>";
+        $error = "<p style='color:red;'>Please fill in both date and time.</p>";
     }
 }
+
+require_once '../templates/header.php'; // Load the page header AFTER form handling to prevent header error
 ?>
 
 <!-- HTML form pre-filled with existing appointment details -->
 <div class="container mt-5">
     <h2>Edit Appointment</h2>
+
+    <?php if (isset($error)) echo $error; ?>
+
     <form method="POST">
         <!-- Date input -->
         <label for="appointment_date">Date:</label><br>
