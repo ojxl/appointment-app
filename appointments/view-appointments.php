@@ -16,7 +16,7 @@ $user_id = $_SESSION['user_id'];
 $search = $_GET['search'] ?? ''; // Forms & Form Validation.pptx shows using $_GET for simple filters
 
 // Prepare the base SQL query to fetch all appointments for this user
-$sql = "SELECT id, appointment_date, appointment_time, notes 
+$sql = "SELECT id, appointment_date, appointment_time, notes, status
         FROM appointments 
         WHERE user_id = :user_id";
 
@@ -74,10 +74,16 @@ $appointments = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <td><?= htmlspecialchars($appointment['appointment_time']) ?></td>
                         <td><?= htmlspecialchars($appointment['notes']) ?></td>
                         <td>
-                            <!-- Provide edit and delete options with confirmation on delete -->
+                            <?php if ($appointment['status'] !== 'completed'): ?>
+                            <a href="mark-completed.php?id=<?= $appointment['id'] ?>" class="btn btn-sm btn-success">Mark as Completed</a>
+                            <?php else: ?>
+                            <span class="badge bg-success">Completed</span>
+                            <?php endif; ?>
+    
                             <a href="edit.php?id=<?= $appointment['id'] ?>" class="btn btn-sm btn-warning">Edit</a>
                             <a href="delete.php?id=<?= $appointment['id'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?');">Delete</a>
                         </td>
+
                     </tr>
                 <?php endforeach; ?>
             </tbody>

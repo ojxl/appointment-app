@@ -75,13 +75,14 @@ if (session_status() === PHP_SESSION_NONE) {
                             <ul class="menu-list">
                                 <li class="menu-item"><a href="/appointment-app/public/index.php">Home</a></li>
                                 <li class="menu-item"><a href="/appointment-app/public/appointments/view-appointments.php">My Appointments</a></li>
+                                <li class="menu-item"><a href="/appointment-app/public/about.php">About Us</a></li>
                                 
                                 <?php if (isset($_SESSION['user_id'])): ?>
                                     <li class="menu-item"><a href="/appointment-app/public/auth/logout.php">Logout</a></li>
                                 <?php else: ?>
                                     <li class="menu-item"><a href="/appointment-app/public/auth/login.php">Login</a></li>
                                     <li class="menu-item"><a href="/appointment-app/public/auth/register.php">Register</a></li>
-                                     <li class="menu-item"><a href="/appointment-app/public/about.php">About Us</a></li>
+                                    
                                 <?php endif; ?>
                             </ul>
                             <div class="hamburger">
