@@ -23,7 +23,7 @@ require_once 'includes/cart_functions.php';
 						<i class="icon icon-arrow-left"></i>
 					</button>
 
-				
+					<div class="main-slider pattern-overlay">
 						<div class="slider-item">
 							<div class="banner-content">
 								<h2 class="banner-title">Life of PI</h2>
@@ -40,6 +40,11 @@ require_once 'includes/cart_functions.php';
 							<img src="images/main-banner1.jpg" alt="banner" class="banner-image">
 						</div><!--slider-item-->
 
+					</div><!--slider-->
+
+					<button class="next slick-arrow">
+						<i class="icon icon-arrow-right"></i>
+					</button>
 
 				</div>
 			</div>
@@ -525,106 +530,7 @@ require_once 'includes/cart_functions.php';
 
 	<section id="special-offer" class="bookshelf pb-5 mb-5">
 
-		<div class="section-header align-center">
-			<div class="title">
-				<span>Grab your opportunity</span>
-			</div>
-			<h2 class="section-title">Books with offer</h2>
-		</div>
-
-		<div class="container">
-			<div class="row">
-				<div class="inner-content">
-					<div class="product-list" data-aos="fade-up">
-						<div class="grid product-grid">
-							<div class="product-item">
-								<figure class="product-style">
-									<img src="images/product-item5.jpg" alt="Books" class="product-item">
-								</figure>
-								<figcaption>
-									<h3>The Alchemist</h3>
-									<span>Paul Coelho</span>
-									<div class="item-price">
-										<span class="prev-price">$ 40.00</span>$ 30.00
-									</div>
-								</div>
-								
-							</figcaption>
-
-							<div class="product-item">
-								<figure class="product-style">
-									<img src="images/product-item6.jpg" alt="Books" class="product-item">
-								</figure>
-								<figcaption>
-									<h3>Atomic Habits</h3>
-									<span>James Clear</span>
-									<div class="item-price">
-										<span class="prev-price">$ 35.00</span>$ 25.00
-									</div>
-								</div>
-							
-							</figcaption>
-
-							<div class="product-item">
-								<figure class="product-style">
-									<img src="images/product-item7.jpg" alt="Books" class="product-item">
-								</figure>
-								<figcaption>
-									<h3>Where the crawdads sing</h3>
-									<span>Delia Owens</span>
-									<div class="item-price">
-										<span class="prev-price">$ 30.00</span>$ 20.00
-									</div>
-								</div>
-								<form action="add_to_cart.php" method="POST">
-												<input type="hidden" name="title" value="Where the crawdads sing">
-												<input type="hidden" name="author" value="Delia Owens">
-												<input type="hidden" name="price" value="20.00">
-												<button type="submit">+ Add to Cart</button>
-											</form>
-							</figcaption>
-
-							<div class="product-item">
-								<figure class="product-style">
-									<img src="images/product-item8.jpg" alt="Books" class="product-item">
-								</figure>
-								<figcaption>
-									<h3>The Midnight Library</h3>
-									<span>Matt Haig</span>
-									<div class="item-price">
-										<span class="prev-price">$ 25.00</span>$ 15.00
-									</div>
-								</div>
-								<form action="add_to_cart.php" method="POST">
-												<input type="hidden" name="title" value="The Midnight Library">
-												<input type="hidden" name="author" value="Matt Haig">
-												<input type="hidden" name="price" value="15.00">
-												<button type="submit">+ Add to Cart</button>
-											</form>
-							</figcaption>
-
-							<div class="product-item">
-								<figure class="product-style">
-									<img src="images/product-item2.jpg" alt="Books" class="product-item">
-									
-								</figure>
-								<figcaption>
-									<h3>Simple way of piece life</h3>
-									<span>Armor Ramsey</span>
-									<div class="item-price">$ 40.00</div>
-								</figcaption>
-							</div>
-						</div><!--grid-->
-					</div>
-				</div><!--inner-content-->
-			</div>
-		</div>
 	</section>
-
-
-	
-
-	
 	
 	<script src="js/jquery-1.11.0.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
