@@ -3,45 +3,26 @@
 // This file ensures the user is logged in before accessing this page
 require_once '../auth/check.php'; // Auth check is covered in the "Login with Sessions labsheet 2023" and "L6 Cookies Sessions.pptx"
 
-// Include the database connection using PDO (as required by the brief)
-require_once '../includes/db.php'; // This follows the structure outlined in SymfonyCasts Ep.3 and the Summer Project Brief
+// Load the database and appointment classes (instead of doing raw SQL here)
+// Reference: Based on OOP refactor approach from "Build a no-frills PHP CRUD App" and 4_Website file structure and MVCs intro.pptx
+require_once '../classes/Database.php';
+require_once '../classes/Appointment.php';
 
-// Load the header template for consistent layout
-require_once '../templates/header.php';
+// Create the database connection using the Database class
+$db = new Database();
+$pdo = $db->getConnection();
 
-// Get the currently logged in user's ID from the session
-$user_id = $_SESSION['user_id'];
+// Create an Appointment object for the logged-in user
+$appointmentManager = new Appointment($pdo, $_SESSION['user_id']);
 
 // Get the search term from the URL if it exists
 $search = $_GET['search'] ?? ''; // Forms & Form Validation.pptx shows using $_GET for simple filters
 
-// Prepare the base SQL query to fetch all appointments for this user
-$sql = "SELECT id, appointment_date, appointment_time, notes, status
-        FROM appointments 
-        WHERE user_id = :user_id";
+// Fetch all appointments for this user (search is handled inside the class)
+$appointments = $appointmentManager->getAll($search);
 
-// Build parameter array with user ID
-$params = [':user_id' => $user_id];
-
-// If the user entered something in the search box, add filtering conditions
-if (!empty($search)) {
-    // https://www.w3schools.com/sql/sql_like.asp
-    $sql .= " AND (
-                appointment_date LIKE :searchTerm 
-                OR appointment_time LIKE :searchTerm 
-                OR notes LIKE :searchTerm
-            )";
-    $params[':searchTerm'] = "%$search%"; // Add wildcards for LIKE search
-}
-
-// Prepare the PDO statement
-$stmt = $pdo->prepare($sql);
-
-// Execute the query using parameters array
-$stmt->execute($params);
-
-// Fetch all matching appointment records
-$appointments = $stmt->fetchAll(PDO::FETCH_ASSOC);
+// Load the header template for consistent layout
+require_once '../templates/header.php';
 
 ?>
 
@@ -75,15 +56,17 @@ $appointments = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <td><?= htmlspecialchars($appointment['notes']) ?></td>
                         <td>
                             <?php if ($appointment['status'] !== 'completed'): ?>
-                            <a href="mark-completed.php?id=<?= $appointment['id'] ?>" class="btn btn-sm btn-success">Mark as Completed</a>
+                                <!-- Button to mark appointment as completed -->
+                                <a href="mark-completed.php?id=<?= $appointment['id'] ?>" class="btn btn-sm btn-success">Mark as Completed</a>
                             <?php else: ?>
-                            <span class="badge bg-success">Completed</span>
+                                <!-- Badge showing status if already completed -->
+                                <span class="badge bg-success">Completed</span>
                             <?php endif; ?>
     
+                            <!-- Edit and Delete actions -->
                             <a href="edit.php?id=<?= $appointment['id'] ?>" class="btn btn-sm btn-warning">Edit</a>
                             <a href="delete.php?id=<?= $appointment['id'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?');">Delete</a>
                         </td>
-
                     </tr>
                 <?php endforeach; ?>
             </tbody>

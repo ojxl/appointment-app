@@ -1,5 +1,4 @@
 <?php
-// Make sure the session is started before checking login state
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
@@ -16,11 +15,12 @@ if (session_status() === PHP_SESSION_NONE) {
     <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="/appointment-app/public/css/normalize.css">
-    <link rel="stylesheet" href="/appointment-app/public/icomoon/icomoon.css">
-    <link rel="stylesheet" href="/appointment-app/public/css/vendor.css">
-    <link rel="stylesheet" href="/appointment-app/public/style.css">
+    <link rel="stylesheet" href="<?php echo '/appointment-app/public/css/normalize.css'; ?>">
+    <link rel="stylesheet" href="<?php echo '/appointment-app/public/icomoon/icomoon.css'; ?>">
+    <link rel="stylesheet" href="<?php echo '/appointment-app/public/css/vendor.css'; ?>">
+    <link rel="stylesheet" href="<?php echo '/appointment-app/public/assets/css/style.css'; ?>">
 </head>
+
 
 <body data-bs-spy="scroll" data-bs-target="#header" tabindex="0">
 <div id="header-wrap">

@@ -4,9 +4,9 @@ require_once 'includes/session.php'; // session management (ref: Login with Sess
 require_once 'includes/cart_functions.php'; // handles add/remove cart functions (ref: cart_functions.php from project)
 
 // These values are sent from the product form in index.php using the GET method
-$title = $_GET['title'] ?? '';  // fallback to empty string if not set (ref: SymfonyCasts Ep3 - $_GET usage)
-$author = $_GET['author'] ?? '';
-$price = $_GET['price'] ?? '';
+$title = $_POST['title'] ?? '';  // fallback to empty string if not set (ref: SymfonyCasts Ep3 - $_GET usage)
+$author = $_POST['author'] ?? '';
+$price = $_POST['price'] ?? '';
 
 // We only want to add if all 3 values are present (title, author, price)
 if ($title && $author && $price) {

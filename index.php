@@ -30,7 +30,7 @@ require_once 'includes/cart_functions.php';
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero
 									ipsum enim pharetra hac. Urna commodo, lacus ut magna velit eleifend. Amet, quis
 									urna, a eu.</p>
-								<form action="add_to_cart.php" method="GET">
+								<form action="add_to_cart.php" method="POST">
 									<input type="hidden" name="title" value="Life of PI">
 									<input type="hidden" name="author" value="Yann Martel">
 									<input type="hidden" name="price" value="25.00">
@@ -109,7 +109,7 @@ require_once 'includes/cart_functions.php';
 										<h3>The Kite Runner</h3>
 										<span>Khaled Hosseini</span>
 										<div class="item-price">$ 40.00</div>
-											<form action="add_to_cart.php" method="GET">
+											<form action="add_to_cart.php" method="POST">
 												<input type="hidden" name="title" value="The Kite Runner">
 												<input type="hidden" name="author" value="Khaled Hosseini">
 												<input type="hidden" name="price" value="40.00">
@@ -129,7 +129,7 @@ require_once 'includes/cart_functions.php';
 										<h3>The Seven Husbands of Evelyn Hugo</h3>
 										<span>Taylor Jenkins Reid</span>
 										<div class="item-price">$ 30.00</div>
-											<form action="add_to_cart.php" method="GET">
+											<form action="add_to_cart.php" method="POST">
 												<input type="hidden" name="title" value="The Seven Husbands of Evelyn Hugo">
 												<input type="hidden" name="author" value="Taylor Jenkins Reid">
 												<input type="hidden" name="price" value="30.00">
@@ -149,7 +149,7 @@ require_once 'includes/cart_functions.php';
 										<h3>A Thousand Splendid Suns</h3>
 										<span>Khaled Hosseini</span>
 										<div class="item-price">$ 25.00</div>
-											<form action="add_to_cart.php" method="GET">
+											<form action="add_to_cart.php" method="POST">
 												<input type="hidden" name="title" value="A Thousand Splendid Suns">
 												<input type="hidden" name="author" value="Khaled Hosseini">
 												<input type="hidden" name="price" value="25.00">
@@ -170,7 +170,7 @@ require_once 'includes/cart_functions.php';
 										<h3>To Kill A Mockingbird</h3>
 										<span>Gregory Peck</span>
 										<div class="item-price">$ 30.00</div>
-											<form action="add_to_cart.php" method="GET">
+											<form action="add_to_cart.php" method="POST">
 												<input type="hidden" name="title" value="To Kill A Mockingbird">
 												<input type="hidden" name="author" value="Gregory Peck">
 												<input type="hidden" name="price" value="30.00">
@@ -214,7 +214,7 @@ require_once 'includes/cart_functions.php';
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet,
 										libero ipsum enim pharetra hac.</p>
 									<div class="item-price">$ 25.00</div>
-										<form action="add_to_cart.php" method="GET">
+										<form action="add_to_cart.php" method="POST">
 											<input type="hidden" name="title" value="Harry Potter and the Sorcerers Stone">
 											<input type="hidden" name="author" value="JK Rowling">
 											<input type="hidden" name="price" value="25.00">
@@ -265,7 +265,7 @@ require_once 'includes/cart_functions.php';
 											<h3>The Innovators</h3>
 											<span>Walter Isaacson</span>
 											<div class="item-price">$ 18.00</div>
-											<form action="add_to_cart.php" method="GET">
+											<form action="add_to_cart.php" method="POST">
 												<input type="hidden" name="title" value="The Innovators">
 												<input type="hidden" name="author" value="Walter Isaacson">
 												<input type="hidden" name="price" value="18.00">
@@ -285,7 +285,7 @@ require_once 'includes/cart_functions.php';
 											<h3>Rich Dad Poor Dad</h3>
 											<span>Robert Kiyosaki</span>
 											<div class="item-price">$ 10.00</div>
-												<form action="add_to_cart.php" method="GET">
+												<form action="add_to_cart.php" method="POST">
 													<input type="hidden" name="title" value="Rich Dad Poor Dad">
 													<input type="hidden" name="author" value="Robert Kiyosaki">
 													<input type="hidden" name="price" value="10.00">
@@ -305,7 +305,7 @@ require_once 'includes/cart_functions.php';
 											<h3>Hooked: How to Build Habit-Forming Products</h3>
 											<span>Nir Eyal</span>
 											<div class="item-price">$ 12.00</div>
-												<form action="add_to_cart.php" method="GET">
+												<form action="add_to_cart.php" method="POST">
 												<input type="hidden" name="title" value="Hooked: How to Build Habit-Forming Products">
 												<input type="hidden" name="author" value="Nir Eyal">
 												<input type="hidden" name="price" value="12.00">
@@ -325,7 +325,7 @@ require_once 'includes/cart_functions.php';
 											<h3>Think and Grow Rich</h3>
 											<span>Napolean Hill</span>
 											<div class="item-price">$ 8.00</div>
-												<form action="add_to_cart.php" method="GET">
+												<form action="add_to_cart.php" method="POST">
 													<input type="hidden" name="title" value="Think and Grow Rich">
 													<input type="hidden" name="author" value="Napolean Hill">
 													<input type="hidden" name="price" value="8.00">
@@ -348,7 +348,7 @@ require_once 'includes/cart_functions.php';
 											<h3>AI Superpowers</h3>
 											<span>Kai-Fu Lee</span>
 											<div class="item-price">$ 14.00</div>
-											<form action="add_to_cart.php" method="GET">
+											<form action="add_to_cart.php" method="POST">
 													<input type="hidden" name="title" value="AI Superpowers">
 													<input type="hidden" name="author" value="Kai-Fu Lee">
 													<input type="hidden" name="price" value="14.00">
@@ -368,7 +368,7 @@ require_once 'includes/cart_functions.php';
 											<h3>Good to great</h3>
 											<span>Jim Collins</span>
 											<div class="item-price">$ 16.00</div>
-											<form action="add_to_cart.php" method="GET">
+											<form action="add_to_cart.php" method="POST">
 													<input type="hidden" name="title" value="Good to great">
 													<input type="hidden" name="author" value="Jim Collins">
 													<input type="hidden" name="price" value="16.00">
@@ -388,7 +388,7 @@ require_once 'includes/cart_functions.php';
 											<h3>The Notebook</h3>
 											<span>Nicholas Sparks</span>
 											<div class="item-price">$ 10.00</div>
-											<form action="add_to_cart.php" method="GET">
+											<form action="add_to_cart.php" method="POST">
 													<input type="hidden" name="title" value="The Notebook">
 													<input type="hidden" name="author" value="Nicholas Sparks">
 													<input type="hidden" name="price" value="10.00">
@@ -408,7 +408,7 @@ require_once 'includes/cart_functions.php';
 											<h3>The Great Gatsby</h3>
 											<span>F. Scott Fitzgerald </span>
 											<div class="item-price">$ 15.00</div>
-											<form action="add_to_cart.php" method="GET">
+											<form action="add_to_cart.php" method="POST">
 													<input type="hidden" name="title" value="The Great Gatsby">
 													<input type="hidden" name="author" value="F. Scott Fitzgerald">
 													<input type="hidden" name="price" value="15.00">
@@ -433,7 +433,7 @@ require_once 'includes/cart_functions.php';
 											<h3>Rich Dad Poor Dad</h3>
 											<span>Robert Kiyosaki</span>
 											<div class="item-price">$ 10.00</div>
-												<form action="add_to_cart.php" method="GET">
+												<form action="add_to_cart.php" method="POST">
 													<input type="hidden" name="title" value="Rich Dad Poor Dad">
 													<input type="hidden" name="author" value="Robert Kiyosaki">
 													<input type="hidden" name="price" value="10.00">
@@ -453,7 +453,7 @@ require_once 'includes/cart_functions.php';
 											<h3>Think and Grow Rich</h3>
 											<span>Napolean Hill</span>
 											<div class="item-price">$ 8.00</div>
-												<form action="add_to_cart.php" method="GET">
+												<form action="add_to_cart.php" method="POST">
 													<input type="hidden" name="title" value="Think and Grow Rich">
 													<input type="hidden" name="author" value="Napolean Hill">
 													<input type="hidden" name="price" value="8.00">
@@ -473,7 +473,7 @@ require_once 'includes/cart_functions.php';
 											<h3>Good to great</h3>
 											<span>Jim Collins</span>
 											<div class="item-price">$ 16.00</div>
-											<form action="add_to_cart.php" method="GET">
+											<form action="add_to_cart.php" method="POST">
 													<input type="hidden" name="title" value="Good to great">
 													<input type="hidden" name="author" value="Jim Collins">
 													<input type="hidden" name="price" value="16.00">
@@ -512,7 +512,7 @@ require_once 'includes/cart_functions.php';
 											<h3>The Innovators</h3>
 											<span>Walter Isaacson</span>
 											<div class="item-price">$ 18.00</div>
-											<form action="add_to_cart.php" method="GET">
+											<form action="add_to_cart.php" method="POST">
 												<input type="hidden" name="title" value="The Innovators">
 												<input type="hidden" name="author" value="Walter Isaacson">
 												<input type="hidden" name="price" value="18.00">
@@ -595,7 +595,7 @@ require_once 'includes/cart_functions.php';
 										<span class="prev-price">$ 30.00</span>$ 20.00
 									</div>
 								</div>
-								<form action="add_to_cart.php" method="GET">
+								<form action="add_to_cart.php" method="POST">
 												<input type="hidden" name="title" value="Where the crawdads sing">
 												<input type="hidden" name="author" value="Delia Owens">
 												<input type="hidden" name="price" value="20.00">
@@ -614,7 +614,7 @@ require_once 'includes/cart_functions.php';
 										<span class="prev-price">$ 25.00</span>$ 15.00
 									</div>
 								</div>
-								<form action="add_to_cart.php" method="GET">
+								<form action="add_to_cart.php" method="POST">
 												<input type="hidden" name="title" value="The Midnight Library">
 												<input type="hidden" name="author" value="Matt Haig">
 												<input type="hidden" name="price" value="15.00">
