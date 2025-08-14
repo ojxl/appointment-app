@@ -9,7 +9,7 @@ require_once 'includes/cart_functions.php';
 <html lang="en">
 <?php include "templates/header.php"; ?>
 
-<H4>							Here at BooksAgain we do our shopping different! instead od buying online, you can just add the desired books to your cart, book an appointment and go pick them up at your closest in store location!</H4>
+<H4>Here at BooksAgain we do our shopping different! instead od buying online, you can just add the desired books to your cart, book an appointment and go pick them up at your closest in store location!</H4>
 
 	</div><!--header-wrap-->
 
@@ -23,7 +23,7 @@ require_once 'includes/cart_functions.php';
 						<i class="icon icon-arrow-left"></i>
 					</button>
 
-					<div class="main-slider pattern-overlay">
+				
 						<div class="slider-item">
 							<div class="banner-content">
 								<h2 class="banner-title">Life of PI</h2>
@@ -40,25 +40,6 @@ require_once 'includes/cart_functions.php';
 							<img src="images/main-banner1.jpg" alt="banner" class="banner-image">
 						</div><!--slider-item-->
 
-						<div class="slider-item">
-							<div class="banner-content">
-								<h2 class="banner-title">Birds gonna be Happy</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero
-									ipsum enim pharetra hac. Urna commodo, lacus ut magna velit eleifend. Amet, quis
-									urna, a eu.</p>
-								<div class="btn-wrap">
-									<a href="#" class="btn btn-outline-accent btn-accent-arrow">Read More<i
-											class="icon icon-ns-arrow-right"></i></a>
-								</div>
-							</div><!--banner-content-->
-							<img src="images/main-banner2.jpg" alt="banner" class="banner-image">
-						</div><!--slider-item-->
-
-					</div><!--slider-->
-
-					<button class="next slick-arrow">
-						<i class="icon icon-arrow-right"></i>
-					</button>
 
 				</div>
 			</div>
