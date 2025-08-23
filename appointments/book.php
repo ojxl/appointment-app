@@ -8,7 +8,7 @@ require_once '../includes/cart_functions.php'; // This was built using PHP sessi
 // Redirect if the cart is empty (basic control flow using session data)
 $cartItems = getCart();
 if (empty($cartItems)) {
-    header("Location: ../cart.php"); // Redirects are from SymfonyCasts Ep. 2 + project lab examples
+    header("Location: ../cart.php"); // Redirects are from SymfonyCasts Ep. 2
     exit;
 }
 ?>

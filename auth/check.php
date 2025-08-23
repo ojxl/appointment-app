@@ -11,8 +11,3 @@ if (!isset($_SESSION['user_id'])) {
     header("Location: /appointment-app/public/auth/login.php?error=Please+login+first");
     exit(); //include exit after header redirects to stop further code from running
 }
-
-// Reference summary:
-// - session_start and $_SESSION checks → "Login with Sessions labsheet 2023"
-// - use of isset() for safe variable checking → "Build a no-frills PHP CRUD App with routing - part2.pdf"
-// - header() for redirects → SymfonyCasts Ep.3, PHP built-in method
