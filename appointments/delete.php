@@ -4,7 +4,6 @@
 require_once '../auth/check.php';
 
 // Include the database connection file
-// Structure adapted from PDO connection examples in Summer Sitting Project brief and lab materials
 require_once '../includes/db.php';
 
 // Retrieve the appointment ID from the URL query string

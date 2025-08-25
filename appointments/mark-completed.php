@@ -12,7 +12,6 @@ $user_id = $_SESSION['user_id'] ?? null; // Session variable storing the current
 // If both appointment ID and user ID are present, proceed
 if ($appointment_id && $user_id) {
     // SQL UPDATE query using named placeholders to avoid SQL injection
-    // UPDATE syntax reference: W3Schools SQL Tutorial (https://www.w3schools.com/sql/sql_update.asp)
     $sql = "UPDATE appointments 
             SET status = 'completed' 
             WHERE id = :id AND user_id = :user_id";
