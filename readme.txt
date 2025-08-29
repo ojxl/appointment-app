@@ -54,6 +54,7 @@ Code:
             PDO::ATTR_EMULATE_PREPARES   => false,
         ];
         $this->pdo = new PDO($dsn, $this->user, $this->pass, $options);
+4.  Pls note any js present in my project is js that came with the template. i am not using js to execute any function of the code at all, it is all js free. 
         
 Images
 BooksAgain logo made by me 
