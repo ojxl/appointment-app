@@ -14,11 +14,11 @@ if (empty($username) || empty($email) || empty($password)) {
 }
 
 // Check if username or email already exists in DB (prepared statements from PDO lesson)
-$sql = "SELECT * FROM users WHERE username = :username OR email = :email";
-$stmt = $pdo->prepare($sql);
+$stmt = $pdo->prepare("SELECT * FROM users WHERE username = :username OR email = :email");
 $stmt->bindValue(':username', $username, PDO::PARAM_STR);
 $stmt->bindValue(':email', $email, PDO::PARAM_STR);
 $stmt->execute();
+
 
 if ($stmt->fetch()) {
     // Stop duplicate accounts
@@ -30,11 +30,12 @@ if ($stmt->fetch()) {
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 // Insert new user into database
-$sql = "INSERT INTO users (username, email, password) VALUES (:username, :email, :password)";
-$stmt = $pdo->prepare($sql);
+$stmt = $pdo->prepare("INSERT INTO users (username, email, password) VALUES (:username, :email, :password)");
 $stmt->bindValue(':username', $username, PDO::PARAM_STR);
 $stmt->bindValue(':email', $email, PDO::PARAM_STR);
 $stmt->bindValue(':password', $hashedPassword, PDO::PARAM_STR);
+$stmt->execute();
+
 
 if ($stmt->execute()) {
     // Registration successful

@@ -31,12 +31,11 @@ $time = date("H:i:s", strtotime($timeInput));//https://www.php.net/manual/en/fun
     $bookTitles = array_map(function($book) {//https://www.php.net/manual/en/function.array-map.php
         return $book['title'];
     }, $books);
-    $notes = implode(', ', $bookTitles); // Turn into comma-separated string. https://www.php.net/manual/en/function.implode.php
-
+    $notes = implode(', ', $bookTitles); // Turn into comma-separated string. CRUD tutorial pt1 
     // Store appointment in database including the notes (book titles)
-    $sql = "INSERT INTO appointments (user_id, appointment_date, appointment_time, notes) 
-            VALUES (:user_id, :appointment_date, :appointment_time, :notes)";
-    $stmt = $pdo->prepare($sql);
+    $stmt = $pdo->prepare("
+    INSERT INTO appointments (user_id, appointment_date, appointment_time, notes) 
+    VALUES (:user_id, :appointment_date, :appointment_time, :notes)");
     $stmt->execute([
         ':user_id' => $user_id,
         ':appointment_date' => $date,

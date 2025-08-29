@@ -15,12 +15,12 @@ if (!$appointment_id) {
 }
 
 // Prepare a secure SELECT query using PDO (from SymfonyCasts Ep3 & brief requirements)
-$sql = "SELECT * FROM appointments WHERE id = :id AND user_id = :user_id";
-$stmt = $pdo->prepare($sql);
+$stmt = $pdo->prepare("SELECT * FROM appointments WHERE id = :id AND user_id = :user_id");
 $stmt->bindParam(':id', $appointment_id, PDO::PARAM_INT);
 $stmt->bindParam(':user_id', $_SESSION['user_id'], PDO::PARAM_INT);
 $stmt->execute();
 $appointment = $stmt->fetch();
+
 
 // Check if this appointment belongs to the logged-in user
 if (!$appointment) {

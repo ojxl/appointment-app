@@ -15,8 +15,13 @@ if (empty($username) || empty($password)) {
 }
 
 // Use a prepared statement to protect against SQL injection (covered in SymfonyCasts and WebDev Part 1)
-$sql = "SELECT * FROM users WHERE username = :username OR email = :email";
-$stmt = $pdo->prepare($sql);
+$stmt = $pdo->prepare("SELECT * FROM users WHERE username = :username OR email = :email");
+
+$stmt->execute([
+    ':username' => $username,
+    ':email'    => $email
+]);
+
 
 // Bind the same value to both :username and :email so users can log in using either
 $stmt->bindValue(':username', $username, PDO::PARAM_STR);

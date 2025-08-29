@@ -12,12 +12,17 @@ $user_id = $_SESSION['user_id'] ?? null; // Session variable storing the current
 // If both appointment ID and user ID are present, proceed
 if ($appointment_id && $user_id) {
     // SQL UPDATE query using named placeholders to avoid SQL injection
-    $sql = "UPDATE appointments 
-            SET status = 'completed' 
-            WHERE id = :id AND user_id = :user_id";
+   $stmt = $pdo->prepare("
+    UPDATE appointments 
+    SET status = 'completed' 
+    WHERE id = :id AND user_id = :user_id
+");
 
-    // Prepare the query (PDO::prepare) as taught in "Build a no-frills PHP CRUD App"
-    $stmt = $pdo->prepare($sql);
+$stmt->execute([
+    ':id'      => $id,
+    ':user_id' => $userId
+]);
+
 
     // Execute the statement with bound parameters
     $stmt->execute([

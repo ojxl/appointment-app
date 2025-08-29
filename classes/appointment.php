@@ -22,23 +22,23 @@ class Appointment {
     // Pattern: Basic SELECT with WHERE + single placeholder
     // Reference: CRUD Part 1 - "Viewing Users (Read)" example, simple execute array 
     if (empty($search)) {
-        $sql = "SELECT id, appointment_date, appointment_time, notes, status
-                FROM appointments
-                WHERE user_id = ?
-                ORDER BY appointment_date DESC, appointment_time DESC";
-        $stmt = $this->pdo->prepare($sql);
-        // Execute with a single value in array for placeholder (exactly as shown in CRUD notes)
-        $stmt->execute([$this->user_id]);
+        $stmt = $this->pdo->prepare("SELECT id, appointment_date, appointment_time, notes, status FROM appointments WHERE user_id = ? ORDER BY appointment_date DESC, appointment_time DESC");
+
+$stmt->execute([$this->user_id]);
+
     } else {
         // If search term present, filter by date, time, or notes using LIKE
         // Pattern: LIKE with wildcards (%) taught in CRUD Part 1 - "Filterig users" 
         // Here we add three LIKE conditions and pass the wildcard wapped search term for each.
-        $sql = "SELECT id, appointment_date, appointment_time, notes, status
-                FROM appointments
-                WHERE user_id = ?
-                AND (appointment_date LIKE ? OR appointment_time LIKE ? OR notes LIKE ?)
-                ORDER BY appointment_date DESC, appointment_time DESC";
-        $stmt = $this->pdo->prepare($sql);
+       $stmt = $this->pdo->prepare("SELECT id, appointment_date, appointment_time, notes, status
+    FROM appointments
+    WHERE user_id = ?
+    AND (appointment_date LIKE ? OR appointment_time LIKE ? OR notes LIKE ?)
+    ORDER BY appointment_date DESC, appointment_time DESC
+");
+
+$stmt->execute([$this->user_id, $search, $search, $search]);
+
         // Inline '%' . $search . '%' exactly like CRUD examples:
         // Passing all parameters in one array in correct order (user_id, then each LIKE term)
         $stmt->execute([
@@ -58,10 +58,16 @@ class Appointment {
     // Mark a specific appointment as completed
     // Reference: UPDATE queries covered in SQL CRUD lab & W3Schools https://www.w3schools.com/sql/sql_update.asp
     public function markCompleted($id) {
-        $sql = "UPDATE appointments SET status = 'completed' 
-                WHERE id = :id AND user_id = :user_id";
-        $stmt = $this->pdo->prepare($sql);
-        // Execute with the appointment ID and current user ID to make sure they own it
-        return $stmt->execute([':id' => $id, ':user_id' => $this->user_id]);
+        $stmt = $this->pdo->prepare("UPDATE appointments 
+    SET status = 'completed' 
+    WHERE id = :id AND user_id = :user_id
+    ");
+
+    // Execute with the appointment ID and current user ID to make sure they own it
+    return $stmt->execute([
+        ':id'      => $id,
+        ':user_id' => $this->user_id
+    ]);
+
     }
 }
