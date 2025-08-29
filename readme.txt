@@ -43,6 +43,19 @@ Magnific Lightbox - https://github.com/dimsemenov/Magnific-Popup
 
 Front end/css taken from: https://themewagon.com/themes/booksaw/
 
+Code:
+1. appointments/confirm.php -$bookTitles = array_map(function($book) {//https://www.php.net/manual/en/function.array-map.php
+2. classes/database.php - https://www.php.net/manual/en/pdo.construct.php
+        $dsn = "mysql:host={$this->host};dbname={$this->db};charset={$this->charset}";
+3. classes/database.php -https://www.w3schools.com/php/php_mysql_connect_pdo.asp
+        $options = [
+            PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+            PDO::ATTR_EMULATE_PREPARES   => false,
+        ];
+        $this->pdo = new PDO($dsn, $this->user, $this->pass, $options);
+4.  Pls note any js present in my project is js that came with the template. i am not using js to execute any function of the code at all, it is all js free. 
+        
 Images
 BooksAgain logo made by me 
 Life of pi image -https://www.bing.com/images/search?view=detailV2&ccid=CJH6YcZ2&id=E8EE454E5D5EEB07E13209A13A743876AA168B9C&thid=OIP.CJH6YcZ2x1sYYy0ooZ6-OwAAAA&mediaurl=https%3A%2F%2Fassets.mycast.io%2Factor_images%2Factor-life-of-pi-313010_large.jpg%3F1638213463&cdnurl=https%3A%2F%2Fth.bing.com%2Fth%2Fid%2FR.0891fa61c676c75b18632d28a19ebe3b%3Frik%3DnIsWqnY4dDqhCQ%26pid%3DImgRaw%26r%3D0&exph=600&expw=426&q=life+of+pi+book&simid=607994437715590837&form=IRPRST&ck=887B9430FB0F422A26D9D9E7B9D7B31E&selectedindex=0&itb=0&cw=1145&ch=542&ajaxhist=0&ajaxserp=0&pivotparams=insightsToken%3Dccid_tF0NjE%252FP*cp_B5BB70571AB8A485854F40AE6970775A*mid_3402F4A253A1FC2649353AC1E6530F029C870C55*simid_607998848621029063*thid_OIP.tF0NjE!_PiWNe3tJ8vkiVWwHaK4&vt=0&sim=11&iss=VSI&ajaxhist=0&ajaxserp=0
