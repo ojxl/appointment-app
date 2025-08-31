@@ -74,7 +74,7 @@ if (session_status() === PHP_SESSION_NONE) {
                         <div class="main-menu stellarnav">
                             <ul class="menu-list">
                                 <li class="menu-item"><a href="/appointment-app/public/index.php">Home</a></li>
-                                <li class="menu-item"><a href="/appointment-app/public/appointments/view-appointments.php">My Appointments</a></li>
+                                <li class="menu-item"><a href="/appointment-app/public/CRUD/view-appointments.php">My Appointments</a></li>
                                 <li class="menu-item"><a href="/appointment-app/public/about.php">About Us</a></li>
                                 
                                 <?php if (isset($_SESSION['user_id'])): ?>
