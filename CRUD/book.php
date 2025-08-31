@@ -19,11 +19,10 @@ if (empty($cartItems)) {
 <head>
   <meta charset="UTF-8">
   <title>Book Appointment</title>
-  <!-- Linking to my site's stylesheet (template integration based on lab step: "Frontend template integrated") -->
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <!-- Include the site's header (as done in header.php from the lab template setup) -->
+  
   <?php include '../templates/header.php'; ?>
 
   <div class="container">
@@ -45,7 +44,6 @@ if (empty($cartItems)) {
         <option value="4:00 PM">4:00 PM</option>
       </select><br><br>
 
-      <!-- Submit button to send appointment form to confirm.php (handled in lab day 6: booking logic) -->
       <button type="submit">Confirm Appointment</button>
     </form>
   </div>

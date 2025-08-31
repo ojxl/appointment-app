@@ -2,8 +2,8 @@
 // This file lets a user edit one of their own appointments
 // Inspired by "Build a no-frills PHP CRUD App with routing - part2" and Summer Brief
 
-require_once '../auth/check.php'; // Protects the page – only logged-in users can access (from "Login with Sessions labsheet 2023")
-require_once '../includes/db.php'; // Connect to database (PDO setup as required in brief)
+require_once '../auth/check.php'; 
+require_once '../includes/db.php'; 
 
 // Get appointment ID from the URL (query parameter)
 $appointment_id = $_GET['id'] ?? null;
@@ -24,7 +24,7 @@ $appointment = $stmt->fetch();
 
 // Check if this appointment belongs to the logged-in user
 if (!$appointment) {
-    require_once '../templates/header.php'; 
+    require_once '../templates/header.php'; // Load the page header
     echo "<p>Appointment not found or you do not have permission to edit it.</p>";
     include '../templates/footer.php';
     exit();

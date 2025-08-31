@@ -4,10 +4,8 @@
 session_start();
 
 // Check if the user is not logged in by seeing if user_id is missing from session
-// I'm using `isset()` which is a safer check and is also demonstrated in "Build a no-frills PHP CRUD App with routing - part2.pdf"
 if (!isset($_SESSION['user_id'])) {
     // If user isn't logged in, send them back to the login page with an error message
-    // Redirection like this is used throughout the login labsheet and the Symfony tutorial as a way to protect routes
     header("Location: /appointment-app/public/auth/login.php?error=Please+login+first");
-    exit(); //include exit after header redirects to stop further code from running
+    exit(); 
 }

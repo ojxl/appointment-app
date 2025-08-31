@@ -1,7 +1,7 @@
 <?php
 // Reference: PDO setup from our db.php, adapted to an OOP class (Build a no-frills PHP CRUD App part1)
 // This class handles database connection using PDO
-//  Adapted from our procedural db.php in the project, 
+
 
 class Database {
     // Database connection details (from our local dev setup with Laragon)

@@ -1,10 +1,6 @@
 <?php
 
-// This file ensures the user is logged in before accessing this page
-require_once '../auth/check.php'; // Auth check is covered in the "Login with Sessions labsheet 2023" and "L6 Cookies Sessions.pptx"
-
-// Load the database and appointment classes (instead of doing raw SQL here)
-// Reference: Based on OOP refactor approach from "Build a no-frills PHP CRUD App" and 4_Website file structure and MVCs intro.pptx
+require_once '../auth/check.php'; 
 require_once '../classes/Database.php';
 require_once '../classes/Appointment.php';
 
@@ -16,7 +12,7 @@ $pdo = $db->getConnection();
 $appointmentManager = new Appointment($pdo, $_SESSION['user_id']);
 
 // Get the search term from the URL if it exists
-$search = $_GET['search'] ?? ''; // Forms & Form Validation.pptx shows using $_GET for simple filters
+$search = $_GET['search'] ?? ''; 
 
 // Fetch all appointments for this user (search is handled inside the class)
 $appointments = $appointmentManager->getAll($search);
@@ -50,7 +46,7 @@ require_once '../templates/header.php';
             <tbody>
                 <?php foreach ($appointments as $appointment): ?>
                     <tr>
-                        <!-- Securely display appointment data using htmlspecialchars to prevent XSS -->
+                        <!-- Securely display appointment data using htmlspecialchars-->
                         <td><?= htmlspecialchars($appointment['appointment_date']) ?></td>
                         <td><?= htmlspecialchars($appointment['appointment_time']) ?></td>
                         <td><?= htmlspecialchars($appointment['notes']) ?></td>

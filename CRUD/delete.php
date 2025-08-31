@@ -1,6 +1,5 @@
 <?php
 // Include login check to make sure only logged-in users can delete appointments
-//'Login with Sessions labsheet 2023' and 'L6 Cookies & Sessions.pptx'
 require_once '../auth/check.php';
 
 // Include the database connection file
@@ -14,8 +13,7 @@ $appointment_id = $_GET['id'] ?? null; // null if not provided
 if ($appointment_id) {
     // Prepare an SQL DELETE statement with placeholders to avoid SQL injection
     // Using named placeholders follows PDO examples from the labs and SymfonyCasts tutorials
-    $stmt = $pdo->prepare("
-    DELETE FROM appointments 
+    $stmt = $pdo->prepare("DELETE FROM appointments 
     WHERE id = :id AND user_id = :user_id
         ");
     $stmt->execute([

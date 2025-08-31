@@ -1,12 +1,12 @@
 <?php
 // Start the session and load helper functions for cart management
 // These are used to track user login and store/retrieve the cart data
-require_once '../includes/session.php'; // From L6 Cookies & Sessions.pptx and lab login flow
+require_once '../includes/session.php'; 
 require_once '../includes/cart_functions.php'; // Cart logic built using SymfonyCasts Ep. 3 session data handling
-require_once '../includes/db.php'; // Database connection setup 
+require_once '../includes/db.php'; 
 
 // Check if the form was submitted with the POST method (i.e., user clicked 'Confirm Appointment')
-// This was covered in Forms and Form Validation.pptx and Day 5–6 of the lab
+// This was covered in Forms and Form Validation.pptx 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Get the selected date and time from the form (with fallback to empty string if not set)
@@ -20,8 +20,8 @@ $time = date("H:i:s", strtotime($timeInput));//https://www.php.net/manual/en/fun
 
 
     // Check the currently logged-in user's username (session comes from login system)
-    $user = $_SESSION['username'] ?? 'Guest'; // Username was stored during login (lab Day 2–3)
-    $user_id = $_SESSION['user_id'] ?? null; // Getting user ID to link booking to the right account
+    $user = $_SESSION['username'] ?? 'Guest'; 
+    $user_id = $_SESSION['user_id'] ?? null; 
 
     // If both fields are filled, store the booking information in the session
    if ($date && $time && $user_id) {
@@ -33,9 +33,9 @@ $time = date("H:i:s", strtotime($timeInput));//https://www.php.net/manual/en/fun
     }, $books);
     $notes = implode(', ', $bookTitles); // Turn into comma-separated string. CRUD tutorial pt1 
     // Store appointment in database including the notes (book titles)
-    $stmt = $pdo->prepare("
-    INSERT INTO appointments (user_id, appointment_date, appointment_time, notes) 
-    VALUES (:user_id, :appointment_date, :appointment_time, :notes)");
+    $sql = "INSERT INTO appointments (user_id, appointment_date, appointment_time, notes) 
+            VALUES (:user_id, :appointment_date, :appointment_time, :notes)";
+    $stmt = $pdo->prepare($sql);
     $stmt->execute([
         ':user_id' => $user_id,
         ':appointment_date' => $date,
@@ -57,7 +57,7 @@ $time = date("H:i:s", strtotime($timeInput));//https://www.php.net/manual/en/fun
 
         // Redirect the user to the appointment confirmation page (standard redirect like in login-process.php)
         header("Location: success.php");
-        exit; // Exit here to prevent any extra processing
+        exit; 
     } else {
         // If something is missing, display an error message
         echo "Missing date or time.";

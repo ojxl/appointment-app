@@ -1,10 +1,6 @@
 <?php
 // This class handles all the database logic for appointments in one place.
 // Reference: CRUD logic from "Build a no-frills PHP CRUD App with routing - part2"
-// plus query structure and prepared statements from module labs & PDO lecture notes.
-
-// Using a class makes it easier to keep code organised (fits the brief's MVC requirement)
-// and avoids repeating the same SQL in multiple files.
 
 class Appointment {
     private $pdo;      // The PDO database connection object
@@ -19,7 +15,6 @@ class Appointment {
 
     // Get all appointments for this user, optionally filtering by a search term
     public function getAll($search = '') {
-    // Pattern: Basic SELECT with WHERE + single placeholder
     // Reference: CRUD Part 1 - "Viewing Users (Read)" example, simple execute array 
     if (empty($search)) {
         $stmt = $this->pdo->prepare("SELECT id, appointment_date, appointment_time, notes, status FROM appointments WHERE user_id = ? ORDER BY appointment_date DESC, appointment_time DESC");
@@ -49,7 +44,6 @@ $stmt->execute([$this->user_id, $search, $search, $search]);
         ]);
     }
 
-    // Fetch all rows as associative arrays
     // Reference: CRUD Part 1 - fetchAll() 
     return $stmt->fetchAll();
 }

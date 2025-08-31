@@ -12,8 +12,7 @@ $user_id = $_SESSION['user_id'] ?? null; // Session variable storing the current
 // If both appointment ID and user ID are present, proceed
 if ($appointment_id && $user_id) {
     // SQL UPDATE query using named placeholders to avoid SQL injection
-   $stmt = $pdo->prepare("
-    UPDATE appointments 
+   $stmt = $pdo->prepare("UPDATE appointments 
     SET status = 'completed' 
     WHERE id = :id AND user_id = :user_id
 ");

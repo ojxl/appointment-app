@@ -6,7 +6,6 @@ include '../templates/header.php';
 <div class="container">
     <h2>Login</h2>
 
-    <!-- If there's an error message passed through the URL, show it to the user -->
     <!-- Using htmlspecialchars to escape characters for safety, which was covered in SymfonyCasts Ep.3 and Part 2 PDF -->
     <?php if (isset($_GET['error'])): ?>
         <p style="color: red;"><?php echo htmlspecialchars($_GET['error']); ?></p>
@@ -25,6 +24,5 @@ include '../templates/header.php';
 </div>
 
 <?php
-// Include the common site footer (also shared across pages)
 include '../templates/footer.php'; 
 ?>
