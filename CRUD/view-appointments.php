@@ -3,6 +3,7 @@
 require_once '../auth/check.php'; 
 require_once '../classes/Database.php';
 require_once '../classes/Appointment.php';
+require_once __DIR__ . '/../src/common.php';
 
 // Create the database connection using the Database class
 $db = new Database();
@@ -28,7 +29,7 @@ require_once '../templates/header.php';
     <!-- Search Form -->
     <form method="GET" class="mb-3">
         <input type="text" name="search" placeholder="Search appointments..." 
-               value="<?= htmlspecialchars($search) ?>">
+               value="<?= escape($search) ?>">
         <button type="submit" class="btn btn-primary">Search</button>
     </form>
 
@@ -46,28 +47,29 @@ require_once '../templates/header.php';
             <tbody>
                 <?php foreach ($appointments as $appointment): ?>
                     <tr>
-                        <!-- Securely display appointment data using htmlspecialchars-->
-                        <td><?= htmlspecialchars($appointment['appointment_date']) ?></td>
-                        <td><?= htmlspecialchars($appointment['appointment_time']) ?></td>
-                        <td><?= htmlspecialchars($appointment['notes']) ?></td>
+                        <!-- Securely display appointment data using escape() -->
+                        <td><?= escape($appointment['appointment_date']) ?></td>
+                        <td><?= escape($appointment['appointment_time']) ?></td>
+                        <td><?= escape($appointment['notes']) ?></td>
                         <td>
                             <?php if ($appointment['status'] !== 'completed'): ?>
                                 <!-- Button to mark appointment as completed -->
-                                <a href="mark-completed.php?id=<?= $appointment['id'] ?>" class="btn btn-sm btn-success">Mark as Completed</a>
+                                <a href="mark-completed.php?id=<?= escape($appointment['id']) ?>" class="btn btn-sm btn-success">Mark as Completed</a>
                             <?php else: ?>
                                 <!-- Badge showing status if already completed -->
                                 <span class="badge bg-success">Completed</span>
                             <?php endif; ?>
     
                             <!-- Edit and Delete actions -->
-                            <a href="edit.php?id=<?= $appointment['id'] ?>" class="btn btn-sm btn-warning">Edit</a>
-                            <a href="delete.php?id=<?= $appointment['id'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?');">Delete</a>
+                            <a href="edit.php?id=<?= escape($appointment['id']) ?>" class="btn btn-sm btn-warning">Edit</a>
+                            <a href="delete.php?id=<?= escape($appointment['id']) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?');">Delete</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
     <?php else: ?>
+
         <!-- Message if no appointments exist -->
         <p class="mt-3">No appointments found.</p>
     <?php endif; ?>
