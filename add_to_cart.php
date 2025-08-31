@@ -1,7 +1,7 @@
 <?php
 // Start the session and bring in the cart functionality so we can use session-based storage
-require_once 'includes/session.php'; // session management (ref: Login with Sessions labsheet 2023)
-require_once 'includes/cart_functions.php'; // handles add/remove cart functions (ref: cart_functions.php from project)
+require_once 'src/session.php'; // session management (ref: Login with Sessions labsheet 2023)
+require_once 'src/cart_functions.php'; // handles add/remove cart functions (ref: cart_functions.php from project)
 
 // These values are sent from the product form in index.php using the GET method
 $title = $_POST['title'] ?? '';  // fallback to empty string if not set (ref: SymfonyCasts Ep3 - $_GET usage)

@@ -3,7 +3,7 @@
 require_once '../auth/check.php';
 
 // Include the database connection file
-require_once '../includes/db.php';
+require_once '../src/db.php';
 
 // Retrieve the appointment ID from the URL query string
 // 'Forms and Form Validation.pptx'

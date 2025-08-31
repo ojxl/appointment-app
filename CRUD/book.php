@@ -1,6 +1,6 @@
 <?php
 // Start session to access login state and cart data
-require_once '../includes/session.php'; // Session handling shown in L6 Cookies & Sessions (pptx)
+require_once '../src/session.php'; // Session handling shown in L6 Cookies & Sessions (pptx)
 
 // Load custom cart helper functions (session-based cart)
 require_once '../includes/cart_functions.php'; // This was built using PHP session logic as taught in SymfonyCasts Ep. 3

@@ -1,7 +1,7 @@
 <?php
 // Start the session and bring in cart helper functions
-require_once 'includes/session.php'; // session check (ref: Login with Sessions labsheet 2023)
-require_once 'includes/cart_functions.php'; // manages session cart items (ref: cart_functions.php from project)
+require_once 'src/session.php'; // session check (ref: Login with Sessions labsheet 2023)
+require_once 'src/cart_functions.php'; // manages session cart items (ref: cart_functions.php from project)
 
 // Get all cart items using our custom function (ref: SymfonyCasts Ep3 - function logic + sessions)
 $cartItems = getCart();

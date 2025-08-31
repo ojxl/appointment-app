@@ -1,6 +1,6 @@
 <?php
 // Connect to the database using PDO (from SymfonyCasts Ep.3 example)
-require_once '../includes/db.php';
+require_once '../src/db.php';
 
 // Get data from the form (?? '' is from my login-process.php to handle empty fields safely)
 $username = $_POST['username'] ?? '';

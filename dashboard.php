@@ -1,7 +1,7 @@
 <?php
 // This file protects the dashboard from being accessed by non-logged-in users
 // Ref: session check adapted from Login with Sessions labsheet 2023
-require_once 'includes/session.php';
+require_once 'src/session.php';
 
 // Header template to keep the site layout consistent
 require_once 'templates/header.php';

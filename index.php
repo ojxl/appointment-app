@@ -2,7 +2,7 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-require_once 'includes/cart_functions.php'; 
+require_once 'src/cart_functions.php'; 
 ?>
 
 <!DOCTYPE html>

@@ -1,7 +1,7 @@
 <?php
 // Start the session so we can access the saved appointment data
 // This is based on the same logic used in login.php and booking system (from L6 Cookies & Sessions.pptx)
-require_once '../includes/session.php';
+require_once '../src/session.php';
 
 // Get the appointment details from the session (set earlier in confirm.php)
 $appointment = $_SESSION['appointment'] ?? null;

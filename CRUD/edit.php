@@ -3,7 +3,7 @@
 // Inspired by "Build a no-frills PHP CRUD App with routing - part2" and Summer Brief
 
 require_once '../auth/check.php'; 
-require_once '../includes/db.php'; 
+require_once '../src/db.php'; 
 
 // Get appointment ID from the URL (query parameter)
 $appointment_id = $_GET['id'] ?? null;

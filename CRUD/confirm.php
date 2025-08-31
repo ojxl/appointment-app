@@ -1,9 +1,9 @@
 <?php
 // Start the session and load helper functions for cart management
 // These are used to track user login and store/retrieve the cart data
-require_once '../includes/session.php'; 
-require_once '../includes/cart_functions.php'; // Cart logic built using SymfonyCasts Ep. 3 session data handling
-require_once '../includes/db.php'; 
+require_once '../src/session.php'; 
+require_once '../src/cart_functions.php'; // Cart logic built using SymfonyCasts Ep. 3 session data handling
+require_once '../src/db.php'; 
 
 // Check if the form was submitted with the POST method (i.e., user clicked 'Confirm Appointment')
 // This was covered in Forms and Form Validation.pptx 

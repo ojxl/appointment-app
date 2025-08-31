@@ -1,7 +1,7 @@
 <?php
 
 // Start session and connect to the database using PDO (covered in SymfonyCasts Ep.3 and WebDev Part 1 PDF)
-require_once '../includes/db.php';
+require_once '../src/db.php';
 session_start();
 
 // Get the username and password from the form (Part 2 PDF shows how to access form data with $_POST)

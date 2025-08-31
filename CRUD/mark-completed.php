@@ -3,7 +3,7 @@
 // and "Login with Sessions labsheet 2023" for session-based authentication checking
 
 require_once '../auth/check.php'; // Ensures only logged-in users can run this script (L6 Cookies & Sessions.pptx)
-require_once '../includes/db.php'; // Connects to the database using PDO (Summer Sitting Project Brief requirement)
+require_once '../src/db.php'; // Connects to the database using PDO (Summer Sitting Project Brief requirement)
 
 // Get the appointment ID from the URL query string
 $appointment_id = $_GET['id'] ?? null; // The '??' null coalescing operator was shown in lab examples for safe defaults
